@@ -1,0 +1,75 @@
+\documentclass[letterpaper,10pt]{memoir}
+\input{preamble.tex}
+\begin{document}
+
+\titulo
+
+\section*{Crecimiento Poblacional (Ley de Malthus y Crecimiento Logístico) (7)} % (((
+\textbf{Resuelve 7 ejercicios no resueltos en clase, con su respectiva gráfica.}
+\begin{enumerate}
+	\item Se sabe que la población de cierta comunidad aumenta con una rapidez proporcional a la cantidad de personas que tiene en cualquier momento t. Si la población se duplicó en cinco años, ¿en cuánto tiempo se triplicará y cuadruplicará?. \textbf{Solución:} 7.3 y 10 años.
+	\item Suponga que la población de la comunidad del problema 1 es de l0 000 después de tres años. ¿Cuál era la población inicial? ¿Cuál será la población en 10 años?
+	\item La población de una comunidad crece a razón proporcional a la población en cualquier momento \(t\). Su población inicial es de 500 y aumenta 15\% en 10 años. ¿Cuál será la población en 30 años? \textbf{Solución:} 760 habitantes.
+	\item En cualquier tiempo \(t\) la cantidad de bacterias en un cultivo crece a razón proporcional al número de bacterias presentes. Al cabo de tres horas se observa que hay 400 individuos. Después de 10 horas hay 2000 especímenes. ¿Cuál era la cantidad inicial de bacterias?
+	\item En 1990, el departamento de recursos naturales liberó 1000 ejemplares de una especie de pez en un lago. En 1997, la población de estos peces en el lago se estimó en 3000. Use la ley de Malthus para el crecimiento de poblaciones y estime la población de estos peces en el año 2014. \textbf{Solución:} 43,236 peces.
+	\item Suponga en el ejemplo anterior que además sabemos que la población de peces en 2004 se estimaba en 5000. Use un modelo logístico para estimar la población de peces en el año 2014. ¿Cuál es la población limite predicha?. \textbf{Solución:} 5882 y 6000 peces.
+	\item Una población crece de acuerdo con la ley logística, y tiene un límite de individuos. Cuando la población es baja se duplica cada 40 minutos. ¿Qué valor tendrá la población después de 2 horas si inicialmente era de a) \(10^8\), b) \(10^9\)?.
+	\item La cantidad \(N(t)\) de supermercados que emplean cajas computarizadas en un país está definida por el problema de valor inicial
+		\[
+			\dfrac{dN}{dt} =N(1- 0.0005N), \hspace{5mm} N(0) =1.
+		\]
+		\begin{enumerate}
+			\item Use el análisis cualitativo, para pronosticar cuántos supermercados se espera adopten el nuevo procedimiento a largo plazo. Trace a mano una curva solución para ese problema de valor inicial.
+			\item Resuelva el problema de valor inicial y a continuación use una graficadora para comprobar la curva solución de la parte (a) ¿Cuántos supermercados se espera adopten la nueva tecnología cuando \(t = 10\)?.
+		\end{enumerate}
+		\textbf{Solución:} a) \(N=2000\), b) \(N(10)=1834\).
+	\item La cantidad \(N(t)\) de personas en una comunidad bajo la influencia de determinado anuncio se apega a la ecuación logística. Al principio, \(N(0) = 500\), en tanto se observa que \(N(1) = 1000\). Se pronostica que habrá un límite de 50000 individuos que verán el anuncio. Determine \(N(t)\) y grafícala.
+	\item  Despreciando las altas tasas de emigración y de homicidios, la población de la ciudad de Nueva York satisface la ley logística
+		\[
+			\dfrac{dp}{dt} = \dfrac{1}{25} p- \dfrac{1}{(25) \cdot10^6} p^2. \hspace{5mm} \mbox{donde \(t\) se mide en años.}
+		\]
+		Suponga que la población de Nueva York en 1970 era de 8 millones. Calcule la población para el futuro. ¿Qué sucede cuando \(t \longrightarrow \infty\)?.
+	\item  Una población inicial de 50,000 habitantes vive en un microcosmos con una capacidad de transporte para 100,0000. Después de 5 años la población se ha incrementado a 60,000. Demuestre que la tasa natural de crecimiento de la población es \((1/5) \ln (3/2)\).
+	\item  El modelo demográfico \(P(t)\) de un suburbio en una gran ciudad está descrito con el problema de valor inicial
+		\[
+			\dfrac{dP}{dt} =P(10^{-1} -10^{-7} P), \hspace{5mm} P(0) =5,000.
+		\]
+		en donde \(t\) se expresa en meses. ¿Cuál es el valor límite de la población? ¿Cuándo igualará la población la mitad de ese valor límite?. \textbf{Solución:} 1’000,000; 5.29 meses.
+\end{enumerate}
+% )))
+
+\section*{Temas Variados (1).} % (((
+\textbf{Resuelve 1 ejercicio con su respectiva gráfica.} 
+\begin{enumerate}
+	\item Cuando se tiene en cuenta lo que se olvida, la rapidez de memorización de algún tema se expresa por:
+		\[
+			\dfrac{dA}{dt} = k_1(M-A) -k_2A,
+		\]
+		donde \(k_1,k_2>0\), y \(A(t)\) es la cantidad a memorizar en el tiempo \(t\), \(M\) es la cantidad total que se debe memorizar y \(M-A\) es la cantidad que resta por ser memorizada.
+		\begin{enumerate}
+			\item Como la ecuación es autónoma, aplique el concepto de línea fase para determinar el valor límite de \(A(t)\) cuando \(t \longrightarrow \infty\).
+			\item Determine \(A(t)\), sujeta a \(A(0) =0\). Trace la gráfica de \(A(t)\) y compruebe su predicción en el inciso a).
+		\end{enumerate}
+	\item La rapidez con que se disemina una medicina en el torrente sanguíneo se describe con la ecuación diferencial,
+		\[
+			\dfrac{dx}{dt} =r-kx, \hspace{5mm} \mbox{donde \(r\) y \(k\) son constantes positivas.}
+		\]
+		La función \(x(t)\) describe la concentración del fármaco en la sangre en el momento \(t\).
+		\begin{enumerate}
+			\item Como la ecuación diferencial es autónoma, aplique el concepto de línea fase, para determinar el valor límite de \(x(t)\), cuando \(t \longrightarrow \infty\).
+			\item Resuelva la ecuación diferencial sujeta a \(x(0) =0\). Trace la gráfica de \(x(t)\) y compruebe su predicción en el inciso a). ¿En qué momento la concentración es la mitad de su valor límite?
+		\end{enumerate}
+	\item Un modelo sencillo de la forma de un tsunami o maremoto es:
+		\[
+			\dfrac{dW}{dt} = W \sqrt{4-2W},
+		\]
+		donde \(W(t) >0\) es la altura de la ola en función de su posición relativa a un punto determinado en alta mar.
+		\begin{enumerate}
+			\item Por inspección, determine todas las soluciones constantes de la ecuación diferencial.
+			\item Resuelva la ecuación diferencial de la parte a), si es necesario utilice un software matemático.
+			\item Con una graficadora, trace todas la soluciones que satisfagan la siguiente condición inicial \(W(0) =0\).
+		\end{enumerate}
+\end{enumerate}
+% )))
+
+\end{document}

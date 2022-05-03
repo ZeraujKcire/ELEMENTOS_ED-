@@ -1,0 +1,115 @@
+\documentclass{beamer}
+\input{preamble.tex}
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}[t]
+	\frametitle{Reducción de Orden.}
+	\begin{block}{}
+		Uno de los hechos más interesantes al estudiar a ecuaciones diferenciales de \(2^{do}\) orden, es que podemos formar una \(2^{da}\) solución \(y_2(x)\) de la E.D.H
+		\[
+			a_2(x) y'' +a_1(x) +a_0(x) y =0 \hspace{5mm} a_2(x) \ne 0 \mbox{ en } I.
+		\]
+		Siempre y cuando se conozca una solución \(y_1(x)\) no trivial (es decir, \(y_1(x) \ne 0\)) en \(I\), de tal forma que \(\{y_1,y_2\}\) sea linealmente independiente. \\[2mm]
+		Observemos que dos soluciones son linealmente dependientes si una es un múltiplo escalar de la otra.
+		Dados \(y_1,y_2\) son L.D. si y sólo si \(y_2(x) = cy_1(x)\).
+		\[
+			\iff \dfrac{y_2(x)}{y_1(x)} = c \hspace{5mm} \forall x \in I.
+		\]
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{block}{}
+		Ahora, estamos interesados en determinar \(y_2(x)\) tal que sea L.I: a \(y_1(x)\), por lo cual, proponemos \(\dfrac{y_2(x)}{y_1(x)} = \mu (x)\)
+		\[
+			\iff y_2(x) = \mu (x) y_1(x).
+		\]
+		Derivemos \(y_2(x) = \mu (x) y_1(x)\)
+		\[
+			y'_2 (x) = \mu ' y_1+ \mu y_1' \hspace{7mm} 
+			\begin{array}{rcl}
+				y'' & = & \mu '' y_1+ \mu 'y_1' + \mu 'y_1' + \mu y'' \\[2mm]
+				& = & \mu '' y_1+2 \mu 'y_1' + \mu y'' .
+			\end{array}
+		\]
+		ahora sustituyendo \(y_2\), \(y_2'\), \(y_2''\) en la E.D. en su forma estándar \(y'' + p(x) y' + q(x) y =0\), donde
+		\[
+			p(x) = \dfrac{a_1(x)}{a_2(x)} \;,\; q(x) = \dfrac{a_0(x)}{a_2(x)}.
+		\]
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{block}{}
+		esto es
+		\footnotesize 
+		\[
+			\begin{array}{rcl}
+				(\mu '' y_1+2 \mu 'y_1' + \mu y'') +p(x) (y'_2 (x) + \mu ' y_1+ \mu y_1') +q(x) (\mu y_1) & = & 0 \\[2mm]
+				(\mu y_1'' +p(x) \mu y_1' +q(x) \mu y_1) + (\mu '' y_1+2 \mu 'y_1' +p(x) \mu ' y_1) & = & 0 \\[2mm]
+				\mu \cancel{(y_1'' +p(x) y_1' +q(x) y_1)} + (\mu '' +2 \mu 'y_1' +p(x) \mu ' y_1) & = & 0 \\[2mm]
+				\textcolor{red}{ \underline{\textcolor{black}{\mu '' y_1+ \mu ' (2y_1' +p(x) y_1) =0}} \hspace{5mm} E.D. \;\; \mu = \mu (x)} &&
+			\end{array}
+		\]
+		Hagamos un cambio de variable
+		\[
+			\tilde{\mu} = \mu ' \;\implies\; \tilde{\mu} ' = \mu ''.
+		\]
+		Luego:
+		\[
+			\begin{array}{rcl}
+				\tilde{\mu} ' y_1 + \tilde{\mu} (2y_1' +p(x) y_1) & = & 0 \\[2mm]
+				\tilde{\mu} ' y_1+ \tilde{\mu} (2y_1' +p(x) y_1) & = & 0 \\[2mm]
+				\iff y_1 \tilde{\mu} ' & = & -(2y_1' +p(x) y_1) \tilde{\mu} \\[2mm]
+				\iff \dfrac{\tilde{\mu} '}{\tilde{\mu}} & = & - \dfrac{2y_1' +p(x) y_1}{y_1}.
+			\end{array}
+		\]
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{block}{}
+		Integramos con respecto a \(x\),
+		\small
+		\[
+			\begin{array}{rcl}
+				\dis\int \dfrac{\tilde{\mu} '}{\mu} dx & = & - \dis\int \dfrac{2y_1' +p(x) y_1}{y_1} dx = - \Bigg[2 \dis\int \dfrac{y_1'}{y_1} dx + \dis\int p(x) dx\Bigg] \\[5mm]
+				\iff \ln | \tilde{\mu} | & = & -2 \ln |y_1| - \dis\int p(x) dx = \ln |y_1|^{-2} - \dis\int p(x) dx+C \\[5mm]
+				e^{\ln | \tilde{\mu} |} & = & e^{\ln |y_1|^{-2} - \int p(x) dx +C} = e^{\ln |y_1|^{-2}} \cdot e^{-\int p(x) dx} \cdot e^C \\[5mm]
+				\tilde{\mu} & = & C \big| y_1 \big| ^{-2} e^{-\int p(x) dx} . \vspace{-2mm}
+			\end{array}
+		\]
+		Como \(\tilde{\mu} = \mu '\), entonces obtenemos a \(\mu\) integrando. \vspace{-2mm} 
+		\[
+			\mu (x) = \dis\int \mu ' dx = \dis\int c \big| y_1 \big| ^{-2} e^{-\int p(x) dx} dx.
+		\]
+		\begin{center}
+			\color{red} \fbox{\color{black} \(\tilde{\mu} = \dis\int \dfrac{e^{-\int p(x) dx}}{y_1^2} dx\)} \hspace{2mm} con \(c=1\).
+		\end{center} 
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{block}{}
+		Luego, dada \(y_1 \ne 0\) solución de la E.D., una \(2^{da}\) solción linealmente independiente a \(y_1\) está dada por
+		\[
+			y_2(x) = \mu (x) y_1(x) \hspace{3mm} \mbox{donde } \mu (x) = \dis\int \dfrac{e^{-\int p(x) dx}}{y_1^2}dx.
+		\]
+		Así pues, \(\{y_1,y_2\}\) conforman una c.f.s y la solución general de la E.D. está dado por la combinación lineal de éstas.
+	\end{block} \vspace{2mm}
+	\begin{example}
+		Sea \(y_1(x) = x^2\) una solución de la E.D. \(x^2y'' -2xy' +4y=0\). Determine la solución general de la E.D. en el intervalo \(I=(0, \infty)\).
+	\end{example}
+\end{frame}
+\begin{frame}[t]
+\end{frame}
+
+\begin{frame}[t]
+	\begin{alertblock}{Ejercicio.}
+		Si \(y_1(x) = e^x\) es solución de \(y'' -y=0\), en el intervalo \((- \infty , \infty)\). Aplique reducción de orden para determinar \(y_2(x)\), L.I. a \(y_1(x)\) y determine explícitamente la solución general de la E.D. dadas.
+	\end{alertblock}
+\end{frame}
+
+\end{document}

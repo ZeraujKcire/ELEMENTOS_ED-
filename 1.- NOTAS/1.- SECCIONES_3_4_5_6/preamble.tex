@@ -1,0 +1,37 @@
+
+% === DATOS === (((
+\title{3. Problemas de Valor Inicial de \(1^{er}\) Orden.}
+\author{Sandra Elizabeth Delgadillo Alemán.}
+\institute{Universidad Autónoma de Aguascalientes.}
+% \date{}
+% )))
+
+% === PAQUETES === (((
+\usepackage{tikz}
+\usepackage{wasysym}
+\usetheme{Warsaw}
+\setbeamertemplate{enumerate items}[circle] % esto lo estoy usando para los simbolos de enumeración.
+% )))
+
+% === COMANDOS === (((
+\newcommand\Myref[1]{% comando para poner referencias con el símbolo de item en enumerate.
+  \begingroup
+  \usebeamerfont*{item projected}%
+  \usebeamercolor[bg]{item projected}%
+  \begin{pgfpicture}{-1ex}{0ex}{1ex}{2ex}
+    \pgfpathcircle{\pgfpoint{0pt}{.75ex}}{1.2ex}
+    \pgfusepath{fill}
+    \pgftext[base]{\color{fg}\ref{#1}}
+  \end{pgfpicture}%
+  \endgroup
+}
+\newcommand{\vectorcito}[3]{
+	\fill [#1, scale=0.5] (#2) circle (3pt);
+	\draw [semithick,#1,->, scale=0.5] (#2) --++ (0.7,0.7*#3);
+} 
+\newcommand{\estabilidad}[5]{
+	\fill [white] (#1) circle (2pt);
+	\node [#5] at (#1) {\tiny #2};
+	\node [#5, #4] at (#1) {\tiny #3};
+	} 
+% )))

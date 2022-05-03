@@ -1,0 +1,26 @@
+\documentclass[margin=0.1in]{standalone}
+\usepackage{tikz}
+\usepackage{stanli}
+\begin{document}
+
+\begin{tikzpicture}[>=latex]
+	\draw [semithick] (-0.25,-0.2) rectangle (5,0.2);
+	\draw [gray,->] (-0.25,0) node [left] {\footnotesize \(A\)} -- (5.5,0) node [left=1mm] {\footnotesize \(B\)};
+	\draw [gray,<->] (-0.25,0.8) --++ (0,-2.5) node [right] {\(y\;+\)};
+	\node [left] at (-0.25,0.5) {\tiny \(F_A\)};
+	\node [right] at (5.25,0.5) {\tiny \(F_B\)};
+	\draw [gray,->] (5,0) --++ (0,0.8);
+	\begin{scope}[scale=0.4]
+		\point{a}{-0.25}{-0.2};
+		\point{b}{5}{-0.2};
+		\support{1}{a};
+		\support{1}{b};
+	\end{scope}
+	\def\ang{35}
+	\draw [->] (4.75/3,0.8) node [right] {\footnotesize \(\delta\)} --++ (0,-0.5);
+	\draw [dashed] (a) to [out=-\ang , in=180+\ang] (b);
+	\draw (4.75/3,-0.1) --++ (0,-0.2) node [below] {\tiny \(L/3\)};
+	\fill (4.75/3,-1) circle (1pt);
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,76 @@
+\documentclass[letterpaper,10pt]{memoir}
+\input{preamble.tex}
+\begin{document}
+
+\titulo
+
+\section*{Coeficientes Indeterminados (8).} % (((
+\textbf{(Hacer 3 ejercicios)} En los problemas del 1 al 8 resuelva las ecuaciones diferenciales por coeficientes indeterminados.
+\begin{enumerate}
+	\item \(y'' +3y \,' +2y=6\). \textbf{Solución.} \(y=c_1e^{-x} c_2e^{-2x} +3\).
+	\item \(y'' -10y' +25y=30x+3\). \textbf{Solución.} \(y=c_1e^{5x} +c_2xe^{5x} + \dfrac{6}{5} x+ \dfrac{3}{5}\).
+	\item \(\dfrac{1}{4} y'' +y' +y=x^2-2x\). \textbf{Solución.} \(y=c_1e^{-2x} +c_2xe^{-2x} +x^2-4x+ \dfrac{7}{2}\). 
+	\item \(y'' +3y=-48x^2e^{3x}\). \textbf{Solución.} \(y=c_1 \cos \sqrt{3} x+c_2 \sin \sqrt{3} x+ \Bigg(-4x^2+4x- \dfrac{4}{3}\Bigg) e^{3x}\).
+	\item \(y'' -y' =-3\). \textbf{Solución.} \(y=c_1+c_2e^x+3x\).
+	\item \(y'' -y' + \dfrac{1}{4} y=3+e^{x/2}\). \textbf{Solución.} \(y=c_1e^{x/2} +c_2xe^{x/2} +12+ \dfrac{1}{2} x^2e^{x/2}\).
+	\item \(y'' +4y=3 \sin (2x)\). \textbf{Solución.} \(y=c_1 \cos 2x+c_2 \sin 2x- \dfrac{3}{4} x \cos 2x\).
+	\item \(y'' +y=2 x \sin x\). \textbf{Solución.} \(y= c_1 \cos x+c_2 \sin x- \dfrac{1}{2} x^2 \cos x+ \dfrac{1}{2} x \sin x\).
+\end{enumerate}
+\textbf{(Hacer 2 ejercicios)} En los problemas del 9 al 13 resuelva las ecuaciones diferenciales por coeficientes indeterminados.
+\begin{enumerate}
+	\setcounter{enumi}{8}
+	\item \(y'' -2y' +5y=e^x \cos 2x\). \textbf{Solución.} \(y=c_1e^x \cos 2x+c_2e^x \sin 2x+ \dfrac{1}{4} xe^x \sin 2x\).
+	\item \(y'' +2y' +y= \sin x+3 \cos 2x\). \textbf{Solución.} \(y=c_1e^{-x} +c_2xe^{-x} - \dfrac{1}{2} \cos x+ \dfrac{12}{25} \sin 2x - \dfrac{9}{25} \cos 2x\).
+	\item \(y''' -6y'' =3- \cos x\). \textbf{Solución.} \(y=c_1+c_2x+c_3e^{6x} - \dfrac{1}{4} x^2- \dfrac{6}{37} \cos x+ \dfrac{1}{37} \sin x\).
+	\item \(y''' -3y'' +3y' -y=x-4e^x\). \textbf{Solución.} \(y=c_1e^x+c_2xe^x+c_3x^2e^x-x-3- \dfrac{2}{3} x^3e^x\).
+	\item \(y^{(4)} +2y'' +y=(x-1) ^2\). \textbf{Solución.} \(y=c_1 \cos +c_2 \sin x +c_3x \cos x+c_3x \sin x+x^2-2x-3\).
+\end{enumerate}
+\textbf{(Hacer 2 ejercicios)} En los problemas 14 a 18, resuelva el problema de valor inicial respectivo.
+\begin{enumerate}
+	\setcounter{enumi}{13}
+\item \(y'' +4y=-2\), \(y \Bigg(\dfrac{\pi}{8}\Bigg) = \dfrac{1}{2}\), \(y' \Bigg(\dfrac{\pi}{8}\Bigg) =2\). \textbf{Solución.} \(y= \sqrt{2} \sin 2x- \dfrac{1}{2}\).
+\item \(5y'' +y' =-6x\), \(y(0) =0\), \(y' (0) =-10\). \textbf{Solución.} \(y=-200+200e^{-x/5} -3x^2+30x\).
+\item \(y'' +4y' +5y=35e^{-4x}\), \(y(0) =-3\), \(y' (0) =1\). \textbf{Solución.} \(y=-10e^{-2x} \cos x+9e^{-2x} \sin x+7e^{-4x}\).
+\item \(\dfrac{d^2x}{dt^2} +w^2x=F_0 \sin w t\), \(x(0) =0\), \(x' (0) =0\). \textbf{Solución.} \(x= \dfrac{F_0}{2w^2} \sin wt- \dfrac{F_0}{2w} t \cos wt\).
+\item \(y''' -2y'' +y' =2-24e^x+40e^{5x}\), \(y(0) = \dfrac{1}{2}\), \(y' (0) = \dfrac{5 }{2}\), \(y'' (0) = -\dfrac{9}{2}\). \textbf{Solución.} \(y=11-11e^x+9xe^x+2x-12x^2e^x+ \dfrac{1}{2} e^{5x}\).
+\end{enumerate}
+\textbf{(Hacer este ejercicio)} Resuelva el problema de valores en la frontera indicado. Esboza su gráfica usando Geogebra e ilustra la interpretación geométrica de las condiciones dadas.\\
+\(y'' +y=x^2+1\), \(y(0) =5\), \(y'(1) =0\). \textbf{Solución.} \(y=6 \cos x-6(\cot 1) \sin x+x^2-1\).
+% )))
+
+\section*{Variación de Parámetros (7).} % (((
+\textbf{(Hacer 3 ejercicios)} Resuelva cada una de las ecuaciones diferenciales en los problemas 20 al 28 por variación de parámetros.
+\begin{enumerate}
+	\setcounter{enumi}{18}
+\item \(y'' +y= \sec x\).  \textbf{Solución.} \(y=c_1 \cos x+c_2 \sin x +x \sin x+ \cos x \ln \big| \cos x \big|\).
+\item \(y'' +y= \sin x\). \textbf{Solución.} \(y=c_1 \cos x+c_2 \sin x- \dfrac{1}{2} x \cos x\).
+\item \(y'' +y= \cos ^2x\). \textbf{Solución.} \(y=c_1 \cos x+c_2 \sin x+ \dfrac{1}{2} - \dfrac{1}{ 6} \cos 2x\).
+\item \(y'' -y= \cosh x\). \textbf{Solución.} \(y=c_1e^x+c_2e^{-x} + \dfrac{1}{2} x\sinh x\).
+\item \(y'' -4y= \dfrac{e^{2x}}{x}\). \textbf{Solución.} \(y=c_1 e^{2x} +c_2e^{-2x} + \dfrac{1}{4} \Bigg(e^{2x} \ln |x|-e^{-2x} \displaystyle\int _{x_0} ^x \dfrac{e^{4t}}{t} dt\Bigg)\), \(x_0>0\).
+\item \(y'' +3y' +2y= \dfrac{1}{1+e^x}\). \textbf{Solución.} \(y=c_1e^{-x} +c_2e^{-2x} +(e^{-x} +e^{-2x}) \ln (1+e^x)\).
+\item \(y'' +3y' +2y= \sin e^x\). \textbf{Solución.} \(y=c_1e^{-x} +c_2e^{-x} -e^{-2x} \sin e^x\).
+\item \(y'' +2y' +y=e^{-t} \ln t\). \textbf{Solución.} \(y=c_1e^{-t} +c_2te^{-t} + \dfrac{1}{2} t^2e^{-t} \ln t- \dfrac{3}{4} t^2e^{-t}\).
+\item \(3y'' -6y' +6y=e^x \sec x\). \textbf{Solución.} \(y=c_1e^x \sin x+c_2e^x \cos x+ \dfrac{1}{3} xe^x \sin x+ \dfrac{1}{3} e^x \cos x \ln \big| \cos x \big|\).
+\end{enumerate}
+\textbf{(Hacer estos ejercicios)} En los siguientes problemas, resuelva por variación de parámetros la ecuación respectiva, sujeta a las condiciones iniciales \(y(0) =1\), \(y' (0) =0\). Esboza su gráfica usando Geogebra e ilustra la interpretación geométrica de las condiciones dadas.
+\begin{enumerate}
+	\setcounter{enumi}{27}
+	\item \(4y'' -y=xe^{x/2}\). \textbf{Solución.} \(y= \dfrac{1}{4} e^{-x/2} + \dfrac{3}{4} e^{x/2} + \dfrac{1}{8} x^2e^{x/2} - \dfrac{1}{4} xe^{x/2}\).
+	\item \(y'' +2y' -8y=2e^{-2x} -e^{-x}\). \textbf{Solución.} \(y= \dfrac{4}{9} e^{-4x} + \dfrac{25}{36} e^{2x} - \dfrac{1}{4} e^{-2x} + \dfrac{1}{9} e^{-x}\).
+\end{enumerate}
+\textbf{(Hacer este ejercicio)} En el problema 31 las funciones se saben que son soluciones linealmente independientes de las ecuaciones diferenciales homogéneas asociadas en \((0, \infty)\). Determine la solución general de la ecuación no homogénea.
+\begin{enumerate}
+	\setcounter{enumi}{30}
+	\item \(x^2y'' +xy' + \Bigg(x^2- \dfrac{1}{4}\Bigg) y=x^{3/2}\). \textbf{Solución.} \(y_1=x^{-1/2} \cos x\), \(y_2=x^{-1/2} \sin x\). \(y=c_1x^{-1/2} \cos x+c_2x^{-1/2} \sin x +x^{-1/2}\).
+\end{enumerate}
+\textbf{(Hacer este ejercicio)} En el problema 32, discuta como se pueden combinar los métodos de coeficientes indeterminados y variación de parámetros, para resolver la ecuación diferencial. Ejecute sus ideas.
+\begin{enumerate}
+	\setcounter{enumi}{31}
+	\item \(3y'' -6y' +30y=15 \sin x+e^x \tan 3x\).
+\end{enumerate}
+% )))
+
+*Puedes usar GeoGebra \url{https://www.geogebra.org/m/KGWhcAqc} o WolframAlpha \url{https://www.wolframalpha.com/} para esbozar o verificar las graficas de las soluciones de PVI o PVF. \\[5mm]
+\textbf{Dennis G. Zill, A First Course of Differential  Equations with Modeling Applications, 9a Ed., Cengage Learning.}
+
+\end{document}

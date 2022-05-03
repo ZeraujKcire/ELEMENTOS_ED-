@@ -1,0 +1,119 @@
+\documentclass[10pt,a5paper]{article}
+\input{preamble.tex}
+\begin{document}
+
+\titulo
+
+\begin{enumerate}
+	\item \textit{Calsifica las siguientes ecuaciones diferenciales según su tipo, orden y linealidad.} \\[2mm]
+		\textbf{Solución.} 
+		\begin{table}[ht]
+			\centering
+			\begin{tabular}{|*{6} {l|}}
+				\hline
+				Ec. & Tipo & Orden & Lineal & V.S. \\ \hline
+				\(\sqrt{1-x} \cdot \dfrac{d^2y}{dx^2} +2x \cdot \dfrac{dy}{dx} = y\) & Ordinaria & \(2^{do}\) Orden & Lineal & No \\ \hline
+				\(y'' -t^2yy' = \sin t\) & Ordinaria & \(2^{do}\) Orden & No lineal & No. \\ \hline
+			\end{tabular}
+		\end{table}
+	\item \textit{Verifica que la función \(y(x) = 3 \sin 2x+e^{-x}\) es solución explícita de la ecuación diferencial} 
+		\[
+			y'' +4y=5e^{-x}.
+		\]
+		\textbf{Solución.} Tenemos que
+		\[
+			\begin{array}{rcl}
+				y' & = & 6 \cos 2x-e^{-x} \\[2mm]
+				y'' & = & -12 \sin 2x+e^{-x}
+			\end{array}
+		\]
+		Así que
+		\[
+			(-12 \sin 2x+e^{-x}) +4(3 \sin 2x+e^{-x}) = 5e^{-x}.
+		\]
+	\item \textit{Compruebe que \(y- \ln y=x^2+1\) es solución general de la ecuación diferencial}
+		\[
+			y' = \dfrac{2xy}{y-1}.
+		\]
+		\textbf{Solución.} Tenemos que
+		\[
+			\begin{array}{rcl}
+				y' +2 \dfrac{y'}{y} =2x & \;\implies\; & y' \Bigg(1+ \dfrac{2}{y}\Bigg) = 2x \\[2mm]
+				& \;\implies\; & y' = \dfrac{2x}{1+2/y} = \dfrac{2xy}{y+2}. \qed 
+			\end{array}
+		\]
+	\item \textit{Determina si las siguientes ecuciones diferneciales son de V.S. o lineales y resuélvelas con el método correspondiente. En cada inciso, indica cuál es solución general implícita y encuentra la explícita.} 
+		\begin{enumerate}
+			\item \(x \cdot \dfrac{dy}{dx} -2y=x^3e^{-x} -5x\). \\[2mm]
+				\textbf{Solución.} \fbox{Es lineal. No es de V.S.} \\[2mm]
+				Tenemos que
+				\[
+					\dfrac{dy}{dx} - \dfrac{2}{x} y = x^2e^{-x} -5.
+				\]
+				Entocnes \(p(x) = - \dfrac{2}{x}\), luego
+				\[
+					\mu (x) = e^{\int p} = e^{\int -2/x} = e^{-2  \log x} =e^{\log x^{-2}} =x^{-2}.
+				\]
+				Por tanto,
+				\[
+					\begin{array}{rcl}
+						x^{-2} \dfrac{dy}{dx} - \dfrac{2}{x^3} y & = & e^{-x} -5x^{-2} \\[5mm]
+						\dfrac{d}{dx} \Bigg(x^{-2} y\Bigg) & = & e^{-x} -5x^{-2} \\[5mm]
+						\dis\int \dfrac{d}{dx} \Bigg(x^{-2} y\Bigg) dx & = & \dis\int (e^{-x} -5x^{-2} )dx \\[5mm]
+						yx^{-2} & = & -e^{-x} + \dfrac{5}{x} +C, \hspace{1cm} C \in \mathbf{R} \\[5mm]
+						y & = & -x^2e^{-x} + 5x+ Cx^2, \hspace{1cm} C \in \mathbf{R}.
+					\end{array}
+				\]
+			\item \((x+xy^2) dx+e^{x^2} ydy=0\). \\[2mm]
+				\textbf{Solución.} \fbox{La ecuación es de V.S.} \\[2mm]
+				Tenemos que
+				\[
+					\begin{array}{rcl}
+						x(1+y^2) dx +e^{x^2} ydy & = & 0 \\[5mm]
+						e^{x^2} ydy & = & -x(1+y^2) dx \\[5mm]
+						\dfrac{ydy}{1+y^2} & = & \dfrac{-xdx}{e^{x^2}} \\[5mm]
+						\dis\int \dfrac{ydy}{1+y^2} & = & \dis\int \dfrac{-xdx}{e^{x^2}} \\[5mm]
+						\dfrac{1}{2} \dis\int \dfrac{du}{1+u} & = & -\dfrac{1}{2} \dis\int \dfrac{dw}{e^{w}} \\[5mm]
+					\end{array}
+				\]
+				\[
+					\begin{array}{rcl}
+						\log (1+u) & = & +e^{-w} +C \\[5mm]
+						\log (1+y^2) & = & e^{-x^2} +C \\[5mm]
+						1+y^2 & = & e^{e^{-x^2} +C} \\[5mm]
+						y & = & \pm \sqrt{e^{e^{-x^2} +C} -1} \;,\; \hspace{1cm} C \in \mathbf{R}.
+					\end{array}
+				\]
+		\end{enumerate}
+	\item \textit{Resuelve la siguiente ecuación diferencial \(x \cdot \dfrac{dy}{dx} = xy \cos x-2xy\), y determina la solución particular explícita que pasa por el punto \((\pi ,1)\).} \\[2mm]
+		\textbf{Solución.} Dividamos entre \(x\), todos los términos.
+		\[
+			\begin{array}{rcl}
+				\dfrac{dy}{dx} &=& y \cos x-2y \\[2mm]
+				\dfrac{dy}{dx} -y(\cos x-2) & = & 0.
+			\end{array}
+		\]
+		Entonces, se tiene \(p(x) = -\cos x+2\). Luego
+		\[
+			\mu (x) = e^{\int p} = e^{\int (-\cos x+2) dx} = e^{-\sin x+2x}.
+		\]
+		Por tanto,
+		\[
+			\begin{array}{rcl}
+				e^{\sin x-2x} \dfrac{dy}{dx} -ye^{- \sin x+2x} (\cos x-2) & = & 0 \\[5mm]
+				\dfrac{d}{dy} \big(ye^{- \sin x+2x}\big) & = & 0\\[5mm]
+				ye^{- \sin x+2x} & = & k, \hspace{1cm} k \in \mathbf{R} \\[5mm]
+				y & = & ke^{\sin x-2x} , \hspace{1cm} k \in \mathbf{R}.
+			\end{array}
+		\]
+		Ahora, se requiere que \(y(\pi) =1\), entonces
+		\[
+			1 = y(\pi) = ke^{\sin \pi -2 \pi} = ke^{-2 \pi}.
+		\]
+		Entonces, \(k=e^{2 \pi}\). La solución del P.V.I. \(y(\pi) =1\), es
+		\[
+			y = e^{2 \pi} \cdot e^{\sin x-2x}.
+		\]
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,91 @@
+\documentclass[letterpaper,10pt]{memoir}
+\input{preamble.tex}
+\begin{document}
+
+\titulo
+
+\begin{enumerate}
+	\item Determine si las siguientes ecuaciones son de variables y/o lineales:
+		\begin{center}
+			\begin{tabular}{|p{7cm}|p{7cm}|}
+				\hline 
+				\begin{enumerate}
+					\item \(x^2 \dfrac{dy}{dx} + \cos x=y\).
+					\item \((y-4x-1) ^2dx-dy =0\).
+					\item \((t+x+2) dx+(3t-x-6)dt =0\).
+				\end{enumerate}
+				&
+				\begin{enumerate}
+					\setcounter{enumii}{3}
+					\item \((y^3e^{-2x} +y^3) dx-e^{-2x} dy=0\).
+					\item \(\dfrac{1}{y-3} \cdot \dfrac{dy}{dx} =- \dfrac{1}{2}\).
+					\item \((t^2-1) \dfrac{dy}{dt} =yt-y\).
+				\end{enumerate}
+				\\ \hline
+			\end{tabular}
+		\end{center} 
+\end{enumerate}
+
+\section*{Ecuaciones Diferenciales de Variables Separables (10).} % (((
+\begin{enumerate}
+	\item \textbf{(Hacer 7 ejercicios)} Resuelve las siguientes ecuaciones diferenciales, usando el método de separación de variables y encuentra las soluciones explícitas cuando sea posible.\\[2mm]
+		\begin{minipage}{0.5\linewidth}
+			\begin{enumerate}
+				\item \(\dfrac{dy}{dx} = \sin 5x\). \textbf{Solución.} \(y=- \dfrac{1}{5} \cos 5x+c\).
+				\item \(dx+e^{3x} dy=0\). \textbf{Solución.} \(y= \dfrac{ 1}{3} e^{-3x} +c\).
+				\item \(x \dfrac{dy}{dx} =4y\). \textbf{Solución.} \(y=cx^4\).
+				\item \(\dfrac{dy}{dx} =e^{3x+2y}\). \textbf{Solución.} \(-3e^{-2y} =2e^{3x} +c\).
+				\item \(y \ln x \cdot \dfrac{dy}{dx} = \Bigg(\dfrac{y+1}{x}\Bigg) ^2\). \textbf{Solución.} \(\dfrac{1}{3} x^3 \ln x- \dfrac{1}{9} x^3 = \dfrac{1}{2} y^2+2y+ \ln |y|+c\).
+				\item \(\sec ^2x dy+ \csc ydx=0\). \textbf{Solución.} \(4 \cos y=2x+ \sin 2x+c\).
+			\end{enumerate}
+		\end{minipage}\hspace{5mm}
+		\begin{minipage}{0.5\linewidth}
+			\begin{enumerate}
+			\setcounter{enumii}{6}
+			\item \((e^y+1) ^2e^{-y} dx+(e^x+1) ^3e^{-x} dy=0\). \textbf{Solución.} \((e^x+1) ^{-2} +2(e^y+1) ^{-1} =c\).
+			\item \(\dfrac{dS}{dr} =kS\). \textbf{Solución.} \(S=ce^{kr}\).
+			\item \(\dfrac{dP}{dt} =P-P^2\). \textbf{Solución.} \(P= \dfrac{ce^t}{1+ce^t}\).
+			\item \(\dfrac{dy}{dx} = \dfrac{xy+3x-y-3}{xy-2x+4y-8}\). \textbf{Solución.} \((y+3) ^5e^x=c(x+4) ^5e^y\).
+			\item \(\dfrac{dy}{dx} =x \sqrt{1-y^2}\). \textbf{Solución.} \(y= \sin \Bigg(\dfrac{1}{2} x^2+c\Bigg)\).
+			\end{enumerate}
+		\end{minipage}
+	\item \textbf{(Hacer 2 ejercicios)} Resuelve los siguientes problemas de valor inicial.
+		\begin{enumerate}
+			\item \(\dfrac{dx}{dt}= 4(x^2+1)\), \(x \Bigg(\dfrac{\pi}{4}\Bigg) =1\). \textbf{Solución.} \(x= \tan \Bigg(4t- \dfrac{3 \pi}{4}\Bigg)\).
+			\item \(y \,' =xy^3(1+x^2) ^{-1/2}\), \(y(0) =1\).
+		\end{enumerate}
+	\item \textbf{(Hacer este ejercicio)} Demuestre una solución implícita de
+		\[
+			2x \sin ^2ydx-(x^2+10) \cos ydy=0,
+		\]
+		es \(\ln (x^2+10) + \csc y=c\), resolviendo la E.D. y derivando implícitamente.
+\end{enumerate}
+% )))
+
+\section*{Ecuaciones Diferenciales Lineales (10).} % (((
+\begin{enumerate}
+	\item \textbf{(Resuelve 7 de estos problemas)} En los siguientes problemas determine la solución general de la ecuación diferencial correspondiente. Indica cuál es el mayor intervalo en el cual esté definida la solución general.
+		\begin{enumerate}
+			\item \(\dfrac{dy}{dx} =5y\). \textbf{Solución.} \(y=ce^{5x}\), \(x \in \mathbb{R}\).
+			\item \(\dfrac{dy}{dx} +y=e^{3x}\). \textbf{Solución.} \(y= \dfrac{1}{4} e^{3x} +ce^{-x}\), \(x \in \mathbb{R}\).
+			\item \(y \,' +3x^2y=x^2\). \textbf{Solución.} \(y= \dfrac{1}{3} +ce^{-x^3}\), \(x \in \mathbb{R}\).
+			\item \(x \dfrac{dy}{dx} -y=x^2 \sin x\). \textbf{Solución.} \(y=cx-x \cos x\), \(x \in \mathbb{R}\).
+			\item \(x \dfrac{dy}{dx} +4y=x^3-x\). \textbf{Solución.} \(y= \dfrac{1}{7} x^3- \dfrac{1}{5} x+cx^{-4}\), \(x>0\).
+			\item \(x^2y \,' +x(x+2) y=e^x\). \textbf{Solución.} \(y= \dfrac{1}{2x^2} e^x+ \dfrac{c}{x^2} e^{-x}\), \(x>0\).
+			\item \(ydx-4(x+y^6) dy=0\). \textbf{Solución.} \(x=2y^6+cy^4\), \(y>0\).
+			\item \(\cos x \cdot \dfrac{dy}{dx} + (\sin x) y=1\). \textbf{Solución.} \(y= \sin x+c \cdot \cos x\), \(x \in (- \pi /2 \;,\; \pi /2)\).
+			\item \((t+y+1) dt-dy=0\). \textbf{Solución.} \(y(t) =-t-2+ce^t\).
+			\item \(x \dfrac{dy}{dx} +(3x+1) y=e^{-3x}\). \textbf{Solución.} \(y=e^{-3x} + \dfrac{c}{x} e^{-3x}\), \(x>0\).
+		\end{enumerate}
+	\item \textbf{(Resuelve 2 de estos ejercicios)} En los siguientes problemas resuelve el problema de valor inicial respectivo. Describa el mayor intervalo en el cual esté definida la solución.
+		\begin{enumerate}
+			\item \(xy \,' +y=e^x\), \(y(1) =2\). \textbf{Solución.} \(y= \dfrac{e^x}{x} + \dfrac{2-e}{x}\), \(x>0\).
+			\item \(t^3 \dfrac{dx}{dt} +3t^2x=t\), \(x(2) =0\). \textbf{Solución.} \(x(t) = \dfrac{1}{2} t^{-1} -2t^{-3}\).
+			\item \(xy \,' +2y=x^2-x+1\), \(y(1) =1/2\), \(x>0\).
+			\item \(y \,' +y= \dfrac{1}{1+x^2}\), \(y(0) =0\).
+		\end{enumerate}
+	\item \textbf{(Hacer este ejercicio)} Encuentre la solución del siguiente problema de valor inicial \(\dfrac{dy}{dx} = \dfrac{1}{e^y-x}\), \(y(1) =0\). Sugerencia: Considere a \(x\) como la variable dependiente, en vez de \(y\).
+\end{enumerate}
+% )))
+
+\end{document}

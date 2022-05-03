@@ -1,0 +1,39 @@
+
+
+=== TERCER TAREA ===
+
+ESTUDIANTE CONTEO EJERCICIOS_CORRECTOS.
+
+ABRAHAM          S 11
+BRANDON          S 10
+BRAYAN           S 9
+CESAR            S 8
+CHRISTIAN        S 10
+DIEGO            N 10
+EVELYN           - -
+FERNANDO         N 6
+GERARDO          S 9
+HECTOR           S 7.5
+IRVING           - -
+JAVIER           N 8
+JERERMY          S 5.5
+JESÚS            N 1
+JOANTY           S 7.5
+JORGE            S 8.5
+JOSÉ_AMADOR      N 6.5
+JOSÉ_MIGUEL      S 9
+JOSUE            N 7.5
+JUAN             N 9.5
+KAREN            N 6.5
+KEVIN            N 7.5
+LAURA            S 5.5
+LUIS_DANIEL      S 4.5
+LUIS_FERNANDO    - -
+MONICA           S 6.5
+OSWALDO          N 6
+PAULO            - -
+RICARDO_MARTINEZ S 6.5
+RICARDO_TRINIDAD - -
+SAMANTHA         S 8.5
+SANTIAGO         S 7.5
+VANESSA          S 3

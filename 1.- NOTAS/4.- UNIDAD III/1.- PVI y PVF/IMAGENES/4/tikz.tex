@@ -1,0 +1,15 @@
+\documentclass[margin=0.1in]{standalone}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}[>=latex]
+	\draw [->] (-0.5,0) -- (3,0) node [right] {\tiny \(x\)};
+	\draw [->] (0,-0.5) -- (0,3) node [right] {\tiny \(y\)};
+	\draw [thick , blue, domain=0.35:3] plot(\x , {1/\x});
+	\draw [thin,black!60] (0.5,0) node [below] {\tiny \(x_0\)} -- (0.5,1/0.5) -- (0,1/0.5) node [left] {\tiny \(y_0\)};
+	\draw [thin,black!60] (2,0) node [below] {\tiny \(x_1\)} -- (2,1/2) -- (0,1/2) node [left] {\tiny \(y_1\)};
+	\fill [red] (0.5,1/0.5) circle (1pt);
+	\fill [red] (2,1/2) circle (1pt);
+\end{tikzpicture}
+
+\end{document}

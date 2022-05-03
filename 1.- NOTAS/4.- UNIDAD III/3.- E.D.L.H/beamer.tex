@@ -1,0 +1,131 @@
+\documentclass{beamer}
+\input{preamble.tex}
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}[t]
+	\frametitle{Teoría Básica para Ecuaciones Diferenciales Lineales Homogéneas.}
+\begin{definition}
+	Una E.D. Lineal de Orden \(n\) de la forma
+	\[
+		a_n(x) y^{(n)} +a_{n-1} (x) y^{(n-1)} + \;\cdots\; + a_1(x) y' +a_0(x) y = g(x).
+	\]
+	se conoce como \textbf{homogénea} si \(g(x) \equiv 0\), mientras que si \(g(x)\) no es idénticamente cero, se conoce como \textbf{no homogénea}.
+\end{definition}
+	\begin{example}
+		\[
+			\begin{array}{rcl}
+				3x^2y''' + \dfrac{1}{x} y - \sin x & = & 0 \\[2mm]
+				3x^2y''' + \dfrac{1}{x} y & = & \underbrace{\sin x} _{g(x) \ne 0} .
+			\end{array}
+		\]
+		Por tanto, es una E.D. no homogénea.
+	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		\[
+			y^{(iv)} +y'' = \underbrace{0} _{g(x) =0}.
+		\]
+		Por tanto, es una E.D. homogénea.
+	\end{example} 
+	\begin{block}{Principio de Superposición.}
+		Sean \(y_1,y_2, \;\cdots\; ,y_k\) soluciones de la E.D. lineal homogénea de orden \(n\) en el intervalo \(I\). Entonces, la combinación lineal
+		\[
+			y(x) = c_1y_1(x) + c_2y_2(x) + \;\cdots\; c_ky_k(x).
+		\]
+		Es solución de la E.D. homogénea, donde \(c_1, \;\ldots,\; c_k\) son constantes abritrarias.
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{corollary}
+		\begin{enumerate}
+			\item Un múltiplo constante de \(y=cy_1(x)\) de una solución \(y_1(x)\) de una E.D. lineal homogénea también es solución.
+			\item Una E.D. lineal homogénea siempre tiene la solución trivial \(y \equiv 0\).
+		\end{enumerate}
+	\end{corollary} 
+	\begin{example}
+		Las funciones \(y_1(x) = x^2\), \(y_2(x) =x^2 \ln x\) son soluciones de la ecuación diferencial lineal homogénea \(x^3y''' -2xy' +4y=0\), en \((0, \infty)\). Determina un número infinito de soluciones usando el prinicipio de superposición.
+	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		Si \(y(x) = e^{7x}\) es solución de la ecuación diferencial \(y'' -9y' +14y=0\), encuentra 3 soluciones de la ecuación diferencial.
+	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{block}{Independencia Lineal en términos del Wronskiano.}
+		Se dice que un conjunto de funciones \(f_1(x) , \;\cdots\; f_n(x)\) es \textbf{linealmente dependiente} (LD) en un intervalo \(I\) si existen constantes \(c_1, \;\ldots,\; c_n\) no todos ceros tales que
+		\[
+			c_1f_1(x) + c_2f_2(x) + \;\cdots\; c_nf_n(x) =0, \hspace{5mm} \mbox{para todo } x \in I.
+		\]
+		Si el conjunto no es LD en el intervalo \(I\), se considera que es \textbf{linealmente independiente} (LI), (es decir, cuando las únicas constantes para que se cumpla que la combinación lineal sea cero, son \(c_1=c_2= \;\cdots\; c_n=0\)).
+	\end{block} 
+	En partiular, nos interesa determinar cuando son LI y eso puede determinarse mecánicamente recurriendo a un determinante llamado \textbf{Wronskaino}.
+\end{frame}
+
+\begin{frame}[t]
+	\begin{block}{Wronskiano.}
+		Suponga que cada una de las funciones \(f_1(x) , \;\cdots\; f_n(x)\) posee al menos \(n-1\) derivadas. Luego a
+		\[
+			W(f_1, \;\cdots\; f_n) = \left| \begin{array}{llll}
+				f_1 				& f_2 				& \;\cdots\;  				& f_n\\[2mm]
+				f_1' 				& f_2' 				& \;\cdots\;  				& f_n'\\[2mm]
+				\vdots & \vdots & \ddots & \vdots \\[2mm]
+				f^{(n-1)}_1 				& f^{(n-1)}_2 				& \;\cdots\;  				& f^{(n-1)}_n
+			\end{array}\right| 
+		\]
+		se le conoce como \textbf{Wronskiano} de las \(n-\)funciones.
+	\end{block} 
+	\begin{block}{Criterio para Determinar Soluciones LI.}
+		Sean \(y_1, \;\ldots,\; y_n\), \(n\) soluciones de la ecuación diferencial lineal homogénea de orden \(n\) en un intervalo \(I\). Entonces el conjunto de soluciones es LI, en \(I\), si y sólo si \(W(y_1, \;\ldots,\; y_n) \ne 0\) para todo \(x \in I\).
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{block}{Conjunto Fundamental de Soluciones.}
+		\textbf{Definición.} Es un conjunto de \(n\) soluciones LI de la ecuación diferencial homogénea de orden \(n\) en un intervalo \(I\).
+	\end{block}
+	\begin{block}{Solución General de unua E.D. Homogénea.}
+		\textbf{Definición.} Sean \(y_1, \;\ldots,\; y_n\) un conjunto de funcamental de soluciones de la E.D. homogénea de orden \(n\), en un intervalo \(I\). Entonces la solución geneal de la ecuación en el intervalo es:
+		\[
+			y(x) = c_1y_i(x) + \;\cdots\; +c_ny_n(x).
+		\]
+		donde \(c_1, \;\ldots,\; c_n\) son constantes positivas.
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{block}{Procedimiento para Resolver E.D. Lineales Homogéneas.}
+		Para determinar todas las soluciones dela E.D.
+		\[
+			a_n(x) y^{(n)} + \;\cdots\; + a_1(x) y' +a_0(x) y =0,
+		\]
+		\vspace{-6mm}
+		\begin{enumerate}
+			\item Determina \(n\) soluciones \(y_1, \;\ldots,\; y_n\) que constituyan un conjunto fundamenta de soluciones.
+			\item Dar la solución general de la ecuación diferencial como:
+			\[
+				y(x) = c_1y_1(x) + \;\cdots\; +c_ny_n(x).
+			\]
+		\end{enumerate}
+	\end{block}
+	\begin{example}
+		Sean \(y_1(x) = e^{x/2}\), \(y_2(x) = xe^{x/2}\) soluciones de la E.D.L.H. \(y'' -y' +1/4y=0\),  en el intervalo de \((- \infty , \infty)\). ¿Es posible dar la solución general de la E.D.? Si es así, escríbala explícitamente.
+	\end{example}
+\end{frame}
+\begin{frame}[t]
+\end{frame}
+
+\begin{frame}[t]
+	\begin{alertblock}{Ejercicio.}
+		Sea \(y_2(x) = e^x \cos 2x\) , \(y_2(x) = e^x \sin 2x\) soluciones de la E.D.L.H. \(y'' +2y' +5y=0\) en el intervalo \((- \infty , \infty)\). Compruebe que el conjunto que contiene a \(y_1,y_2\) es un conjunto fundamental de soluciones y escriba explícitamente la solución general de la E.D.
+	\end{alertblock}
+\end{frame}
+
+\end{document}

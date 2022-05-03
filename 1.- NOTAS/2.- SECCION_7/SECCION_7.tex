@@ -1,0 +1,355 @@
+\documentclass{beamer}
+
+\input{preamble.tex}
+
+\begin{document}
+\frame{\titlepage}
+
+\section{7. Ecuaciones de Variables Searables.}
+
+\begin{frame}[t]
+	\frametitle{7. Ecuaciones de Variables Searables.}
+	\vspace{-4mm}
+	\begin{definition}
+		Se dice que una ecuación diferencial es \textbf{de variables separables} si tiene la siguiente forma.
+		\[
+			\dfrac{dy}{dx} = f(x,y) = g(x) \cdot h(y).
+		\]
+	\end{definition}
+	\begin{example}
+		Identifique si las siguientes ecuaciones diferenciales son de variables separables.
+		\begin{enumerate}
+			\item \(\dfrac{dy}{dx} = x^2y^2e^{3x +4y}\). \\
+				\textbf{Solución.} \(\dfrac{dy}{dx} =x^2y^2e^{3x+4y} =x^2y^2e^{3x} e^{4y} = \underbrace{(x^2e^{3x})} _{g(x)} \underbrace{(y^2e^{4y})}_{h(y)}\).
+				E.D. de variables separables.
+		\end{enumerate}
+	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+		\item \(\dot{x} =1+xy\). \textbf{Solución.} No es E.D. de variables separables.
+		\item \(y \,' =y+ \sin x\). \textbf{Solución.} No es E.D. de variables separables.
+		\item \(dye^xy+(x+xy^2)dx=0 \). \\
+			\textbf{Solución.} 
+				\begin{columns}[t]
+					\column{0.4\textwidth}
+					\[
+						\begin{array}{rcl}
+							- dye^xy & = & (x+xy^2) dx \\[2mm]
+							\dfrac{dy}{dx} & = & - \dfrac{x(1+y^2)}{e^xy} \\[2mm]
+							\dfrac{dy}{dx} & = & \underbrace{\Bigg(\dfrac{-x}{e^x}\Bigg)}_{g(x)} \underbrace{\Bigg(\dfrac{1+y^2}{y}\Bigg)}_{h(y)}.
+						\end{array}
+					\]
+					\column{0.5\textwidth}
+					Si \(y=y(x)\) es equivalente:\\ \((x+xy^2) +e^xy \dfrac{dy}{dx} =0\).
+					\[
+						\begin{array}{rcl}
+							\dfrac{dy}{dx} & = & \dfrac{-(x+xy^2)}{e^xy} \\[2mm]
+							& = & \dfrac{-x(1+y^2)}{e^xy} \\[2mm]
+							& = & \Bigg(\dfrac{-x}{e^x}\Bigg) \Bigg(\dfrac{1+y^2}{y}\Bigg)
+						\end{array}
+					\]
+					\(\therefore \hspace{2mm}\) Es una E.D. de variables separables.
+				\end{columns}
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{block}{\vspace*{-2ex}}
+		La E.D. de variables separables más sencilla que existe es:
+		\begin{center}
+			\textcolor{magenta!70}{\fbox{\textcolor{black}{\(\dfrac{dy}{dx} =g(x) \cdot 1\)}}} \hspace{5mm}\textcolor{magenta!70}{\textit{i.e.} \(\dfrac{dy}{dx} =g(x)\)}
+		\end{center} 
+		Para obtener la función \(y=y(x)\) se debe integrar de ambos lados:
+		\[
+			\int \dfrac{dy}{dx} dx = \int g(x) dx.
+		\]
+		Supongamos que existe la antiderivada de \(g(x)\), es decir, \(G(x)\), tal que \(G \,'(x) =g(x)\).\\
+		Luego sustituyendo \(g(x)\) por su antiderivada \(G \,' (x)\), se tiene
+		\[
+			\begin{array}{c}
+				y(x) = \dis\int G \,' (x) dx = \dis\int \dfrac{d}{dx} G(x) dx = G(x) +c. \\[5mm]
+				\iff y(x) =G(x) +c. \hspace{1cm}\mbox{\alert{Solución gral. explícita.}}
+			\end{array}
+		\]
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		Considere la E.D. \(\dfrac{dy}{dx} =1+e^{2x}\) y resuélvala. \\[2mm]
+		\textbf{Solución.} Integramos de ambos lados:
+		\[
+			\begin{array}{c}
+				\dis\int \dfrac{dy}{dx} dx= \dis\int (1+e^{2x}) dx = \dis\int dx+ \dis\int e^{2x} dx. \\[5mm]
+				\iff \underbrace{y(x) = x+ \dfrac{1}{2} e^{2x} +c} \hspace{5mm} \mbox{Sol. gral. explícita de la E.D.}
+			\end{array}
+		\]
+	\end{example}
+	Consideremos nuevamente la E.D. de variables separables para ilustrar el método de solución
+	\[
+		\dfrac{dy}{dx} = g(x) h(y) \;\;, \hspace{5mm} \textcolor{red}{h(y) \ne 0.}
+	\]
+	dividimos \(h(y)\) a ambos lados de la E.D. \(\dfrac{1}{h(y)} \dfrac{dy}{dx} = g(x)\).
+\end{frame}
+
+\begin{frame}[t]
+	Hagamos \(p(y) = \dfrac{1}{h(y)}\) en la E.D. anterior,
+	\[
+		p(y) \cdot \dfrac{dy}{dx} = g(x).
+	\]
+	integramos de ambos lados con respecto a \(x\).
+	\[
+		\dis\int p(y) \dfrac{dy}{dx} dx= \dis\int g(x) dx.
+	\]
+	Supongamos que existen las antiderivadas de \(p(y)\) y \(g(x)\). Es decir, que existen \(P(y)\) tt \(G(x)\) tales que 
+	\[
+		P \,' (y) =p(y) \hspace{5mm} G \,' (x) =g(x).
+	\]
+	Luego, sustituyendo se tiene:
+	\[
+		\dis\int P \,' (y) dy= \dis\int P \,' (y) \dfrac{dy}{dx} dx = \dis\int g \,' (x) dx.
+	\]
+	Observemos que \(\dfrac{d}{dx} P(y) =P \,' (y) \dfrac{dy}{dx}\). \\[2mm]
+\end{frame}
+
+\begin{frame}[t]
+	Sustituimos en la ecuación antrerior,
+	\[
+		\begin{array}{rcl}
+			\dis\int \dfrac{d}{dx} (P(y)) dx &=& \dis\int \dfrac{d}{dx} (G(x)) dx \\[5mm]
+			\iff P(y) +c_1 & = & G(x) +c_2 \\[2mm]
+			\iff P(y) -G(x) & = & c_2-c_1 \\[2mm]
+		\end{array}
+	\]
+	\begin{center}
+		\hspace{-9mm}\textcolor{magenta!70}{\fbox{\textcolor{black}{\(P(y) -G(x) \hspace{2mm} = \hspace{2mm} c\)}}} \hspace{5mm}\\[2mm]
+		\textcolor{magenta!70}{Solución General Implícita}.
+	\end{center} 
+	Ahora, bien, consideremos la E.D. \(\dfrac{dy}{dx} =g(t (h(t)))\) sujeta a una C.I. dada por \(y(t_0) =y_0\), \(t_0 \in I\).\\[2mm]
+	Este P.V.I. se puede resolver de dos maneras.
+\end{frame}
+
+\begin{frame}[t]
+	\begin{enumerate}
+		\item Determinar la solución general de la E.D. de variables separables y luego encontrar el valor de la cte. arbitraria \(C\) de tal forma que satisfaga la condición inicial \(y(t_0) =y_0\).
+		\item Otra manera de determinar la solución es integrando de \(t_0\) a \(t\) la ecuación estrella
+			\begin{align*}
+				\color{magenta!70} \dis\int _{t_0} ^t \dfrac{d}{ds} \big(P(y(s))\big) ds & \color{magenta!70} = \color{magenta!70} \dis\int _{t_0} ^tG(s) ds \\[2mm]
+				\iff P(y(s)) \Big| _{t_0} ^t & = G(s) \Big| _{t_0} ^t \\[2mm]
+				\iff P(y(t)) - P(y(t_0)) & = G(t) -G(t_0) \\[2mm]
+				\iff \textcolor{red}{\underline{\mathstrut \textcolor{black}{P(y(t)) -G(t)}}} & \textcolor{red}{\underline{\mathstrut \textcolor{black}{= P(y(t_0)) -G(t_0)}}} 
+			\end{align*}
+			Así, \(P(y(t) -G(t) =P(y(t_0))) -G(t_0)\) es la sol. particular implícita de la E.D.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		Determine la solución de la E.D. \((t+1) e^y \cdot  \dfrac{dy}{dx} -(t-1) =0\). que satisface la C.I. \(y(1) =2\).\\[2mm]
+		\textbf{Solución.} La E.D. en su forma normal es:
+		\[
+			\begin{array}{rcl}
+				\dfrac{dy}{dt} = \dfrac{t-1}{e^y(t+1)} &=& \underbrace{\Big(\dfrac{t-1}{t+1}\Big)} _{g(t)} \underbrace{e^{-y}}_{h(y)} \\[2mm]
+				\iff \hspace{5mm} e^y \dfrac{dy}{dx} & = & \dfrac{t-1}{t+1}
+			\end{array}
+		\]
+		Integramos de ambos lados con respecto a \(t\),
+		\begin{equation}
+			\begin{array}{rcl}
+				\dis\int e^ydy = \dis\int e^y \dfrac{dy}{dt} dt & = & \dis\int \dfrac{t-1}{t+1} dt \\[2mm]
+				e^y & = & \dis\int \dfrac{t-1}{t+1} dt \label{estrella}
+			\end{array}
+		\end{equation}
+	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\vspace{-4mm}
+	\begin{exampleblock}{}
+		\[
+			\begin{array}{rcl}
+				\dis\int \dfrac{t-1}{t+1} dt & = & \dis\int \dfrac{t-1+1-1}{t-1} dt \\[4mm]
+				& = & \dis\int \dfrac{(t+1) -2}{t+1} dt \\[4mm]
+				& = & \dis\int \Bigg[1- \dfrac{2}{t+1}\Bigg] dt \\[4mm]
+				& = & t-2\ln(t+1) +c
+			\end{array}
+		\]
+		Por lo tanto, la ec. (\ref{estrella}) es equivalente a:
+		\[
+			\begin{array}{c}
+				\underline{e^y = t-\ln(t+1) ^2+c} \;\;,\hspace{5mm} y \in (-1, \infty) \\[2mm]
+				\mbox{Solución gral. implícita de la E.D.}
+			\end{array}
+		\]
+		Despejamos y aplicando \(\ln\) de ambos lados
+		\[
+			\begin{array}{rcl}
+				\ln e^y & = & \ln (t- \ln (t+1) ^2+c) \\[2mm]
+				y(t) & = & \ln (t- \ln (t+1) ^2+c), \hspace{5mm} \mbox{Sol. gral. explícita de la E.D.}
+			\end{array}
+		\]
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		Ahora, determinemos el valor de \(c\) de tal forma que \(y=2\), en \(t=1\). \\[2mm]
+		Sustituimos \(t=1\), y \(y=2\) en la sol. gral. implícita,
+		\[
+			\begin{array}{rcl}
+				e^2 & = & 1- \ln 4+c \\[2mm]
+				c & = & e^2+ \ln 4-1 \approx 7.77\\[2mm]
+				\therefore \hspace{4mm} y(t) & = & \ln (t- \ln (t+1) ^2+e^2-1+ \ln 4) \hspace{4mm} \mbox{\textcolor{red}{Sol. del P.V.I}}
+			\end{array}
+		\]
+	\end{exampleblock}
+\setbeamercolor*{block title example}{fg=white,bg= magenta!70}
+\setbeamercolor*{block body example}{fg= magenta,bg= magenta!5}
+	\vspace{-2mm}
+	\begin{exampleblock}{Forma alternativa}
+		Otra manera de resolver el P.V.I.
+		\[
+			\begin{array}{rcl}
+				\color{blue!70} \dfrac{dy}{dt} & \color{blue!70} = & \color{blue!70} \dfrac{t-1}{(t+1) e^y} \\[5mm]
+				\iff \hspace{2mm} e^y \dfrac{dy}{dt} & = & \dfrac{t-1}{t+1}
+			\end{array}
+		\]
+		Integramos de \(1\) a \(t\).
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+\setbeamercolor*{block title example}{fg=white,bg= magenta!70}
+\setbeamercolor*{block body example}{fg= magenta,bg= magenta!5}
+	\vspace{-3mm}
+	\begin{exampleblock}{}
+		\[
+			\begin{array}{rcl}
+				\dis\int _2^ye^rdr\dis\int _1^te^y \dfrac{dy}{ds} ds & = & \dis\int _1^t \dfrac{s-1}{s+1} ds \\[5mm]
+				\iff \hspace{2mm} e^r \Big|_2^y & = & \dis\int _1^t \Bigg(1- \dfrac{2}{s+1}\Bigg) ds\\[5mm]
+				\iff \hspace{2mm} e ^r\Big|_2^y & = & \dis\int _1^tds-2 \dis\int _1^t \dfrac{ds}{s+1} \\[5mm]
+				\iff \hspace{2mm} e^y-e^2 & = & s-2 \ln \big| s+ 1 \big| \Big| _1^t \\[5mm]
+				\iff \hspace{2mm} e^y & = & t-2 \ln \big| t+1 \big| -1+ \ln 4+e^2
+			\end{array}
+		\]
+		Aplicamos \(\ln\) de ambos lados,
+		\[
+			\begin{array}{rcl}
+				\ln (e^y) & = & \ln \big(t-2 \ln \big| t+1 \big| -1+ \ln 4+c^2\big) \\[2mm]
+				\iff y & = & \ln \Bigg(t+ \ln \Big(\dfrac{4}{(t+1) ^2} \Big)-1+e^2\Bigg) \hspace{3mm} \mbox{\textcolor{red}{sol. de P.V.I}}
+			\end{array}
+		\]
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		Resuelve la E.D. \((x+xy^2) dx+e^xydy =0\). \\[2mm]
+		\textbf{Solución.} La E.D. es equivalente a la siguiente 
+		\[
+			\begin{array}{rcl}
+				x(1+y^2) dx+e^xydy & = & 0 \\[2mm]
+				\iff e^xydy & = & -x(1+y^2) dx \\[2mm]
+				\iff \dfrac{y}{1+y^2} dy & = & - \dfrac{x}{e^x} dx
+			\end{array}
+		\]
+		Integramos de ambos lados, \vspace{-2mm}
+		\[
+			\begin{array}{rrcl}
+				&\dis\int \dfrac{y}{1+y^2} dy & = & \dis\int - \dfrac{x}{e^x} dx \\[2mm]
+				\iff & \dfrac{1}{2} \ln \big| 1+y^2 \big| & = & xe^{-x} - \dis\int e^{-x} dx \\[2mm]
+				\iff & \dfrac{1}{2} \ln \big| 1+y^2 \big| & = & xe^{-x} +e^{-x} +c,\\
+				&&&  \hspace{2mm} \mbox{sol. gral. implícita de la E.D.}
+			\end{array}
+		\]
+	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		Despejamos \(y\), y multiplicamos por \(2\),
+		\[
+			\begin{array}{rcl}
+				\ln (1+y^2) & = & 2xe^{-x} +2e^{-x} +c_1 \\[2mm]
+				e^{\ln (1+y^2)} & = & e^{2xe^{-x} +2e^{-x} +c_1} \\[2mm]
+				1+y^2 & = & e^{2xe^{-x}} e^{2e^{-x}} e^{c_1}
+			\end{array}
+		\]
+		Por lo tanto, la sol. explícita de la E.D. es
+		\[
+			\begin{array}{rcl}
+				y & = & \pm \sqrt{c_2e^{2xe^{-x}} e^{2e^{-x}} -1} , \hspace{5mm} c_2 >0\\[2mm]
+				y(x) & = & \pm \sqrt{c_2e^{2e^{-x} (x+1)} -1}, \hspace{5mm}c_2 >0
+			\end{array}
+		\]
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\vspace{-3mm}
+	\begin{alertblock}{Ejercicio.}
+		Resuelve la siguiente E.D. y P.V.I.
+		\begin{enumerate}
+			\item \(\dfrac{dy}{dx} =1-x+y^2-xy^2\).
+			\item \((e^{2y} -y) \cos xdy -e^y \sin 2xdx=0\).
+		\end{enumerate}
+	\end{alertblock}
+	\begin{enumerate}
+		\item \textbf{Solución.} La E.D. es equivalente a la siguiente:
+			\[
+				\dfrac{dy}{(1+y^2)}  =  (1-x) dx
+			\]
+			Integrando ambos lados
+			\[
+				\begin{array}{rcl}
+					 \dis\int \dfrac{dy}{1+y^2} & = & \dis\int (1-x) \\[2mm]
+					 \arctan y & = & x- \dfrac{x^2}{2} +c \;\;, \hspace{5mm} \mbox{solución gral. implícita}\\
+					\mbox{Despejando } y&&\\[-2mm]
+					y & = & \tan \Bigg(x- \dfrac{x^2}{2} +c\Bigg) \;\;, \hspace{5mm} \mbox{solución gral. implícita}
+				\end{array}
+			\]
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{enumerate}
+			\setcounter{enumi}{1}
+		\item \textbf{Solución.} La E.D. es equivalente a la siguiente:
+			\[
+				\begin{array}{rcl}
+					\dfrac{e^{2y} -y}{e^y} dy & = & \dfrac{2 \sin x \cos x dx}{\cos x} \\[2mm]
+					\Bigg(e^y- \dfrac{y}{e^y}\Bigg) dy & = & 2 \sin x dx
+				\end{array}
+			\]
+			Integrando en ambos lados
+			\[
+				\begin{array}{rcl}
+					\dis\int \Bigg(e^y- \dfrac{y}{e^y}\Bigg) dy & = & 2 \dis\int \sin xdx \\[5mm]
+					\iff e^y+ye^{-y}+ e^{-y} & = & -2 \cos x+c\;\;,
+				\end{array}
+			\]
+			Es la solución gral. implícita de la E.D.\\
+			Determinemos el valor de \(c\) que cumpla con el P.V.I.\\
+			Sustituimos \(y=0\), y \(x=0\)
+			\[
+				\begin{array}{rcl}
+					e^0+0+e^0&=&-2(1) +c \\[2mm]
+					c & = & 4 \\[2mm]
+				\end{array}
+			\]
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[t]
+	\[
+		\therefore \hspace{5mm} e^y+ye^{-y} +e^{-y} = -2 \cos x+4.
+	\]
+	es la solución particular implícita que cumple con la condición inicial dada.
+\end{frame}
+
+\end{document}
