@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{snakes}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes.misc}
+
+\begin{document}
+
+\begin{tikzpicture}[>=latex]
+	\draw [->, thick] (0,3) -- (0,-2) node [below] {\(x(t)\)};
+	\draw (0,0.5) --++ (-0.2,0) node [left] {\(0\)};
+	\draw [semithick ,snake = brace, mirror snake] (-0.05,0.5) to node [midway, left=2mm] {\(x\)} ++(0,-1);
+	\draw (1.5,1) ellipse (0.7cm and 0.35 cm);
+	\draw (1.5,-1)++(-0.7,0) arc (180:360: 0.7 cm and 0.35cm);
+	\draw [dashed] (1.5,-1)++(-0.7,0) arc (180:0: 0.7 cm and 0.35cm);
+	\draw (0.8,1) -- (0.8,-1);
+	\draw (2.2,1) -- (2.2,-1);
+	\draw (0.8,2.5) rectangle ++(1.4,0.5);
+	\draw [snake = coil, segment amplitude = 0.25cm] (1.5,2.5) --++ (0,-1.5);
+	\draw (1.5,1) --++ (0,-0.3);
+	\draw (1.1,0.7) rectangle node {\(m\)} ++(0.8,-0.5);
+	\draw [red,<->] (2,0.5)  node [below right] {\tiny \(F_B\)}--++ (0,1) node [above, right] {\tiny \(F_A\)};
+	\fill [red] (2,1) circle (1pt);
+\end{tikzpicture}
+
+\end{document}
