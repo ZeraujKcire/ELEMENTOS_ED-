@@ -123,7 +123,7 @@
 		\[
 			\color{red} \underbrace{\color{black} y(x) = c_1e^{m_1x} + c_2e^{m_2 x}} \color{black} \hspace{5mm} c_1,c_1 \mbox{ cts. arb.}
 		\]
-	\end{block} \vspace{7mm}
+	\end{block}
 	\begin{block}{Caso 2. Raíces reales e iguales \(m_1=m_2 =- \frac{b}{2a}\).}
 		En este caso, se tiene una solución de la E.D. \(y_1(x) = e^{- \frac{b}{2a}  x}\). Usamos reducción de orden para obtener una segunda solución L.I. a \(y_1(x)\).
 		\[
@@ -294,7 +294,7 @@
 				\[
 					y(x) = c_1e^{m_1x} + c_2e^{m_2x} + \;\cdots\; + c_ne^{m_nx},
 				\]
-				donde \(c_1, \;\ldots,\; c_n\) son cts. arb. y \(m_1, \;\ldots,\; m_n\) son las raíces de la ec. característica.
+				donde \(c_1, \;\ldots,\; c_n\) son cts. arb. y \(m_1, \;\ldots,\; m_n\) son las raíces.
 		\end{enumerate}
 	\end{block}
 \end{frame}
@@ -302,16 +302,17 @@
 \begin{frame}[t]
 	\begin{block}{}
 		\begin{enumerate}
-			\setcounter{enumi}{1}
-		\item Cuando la raíz \(m_j\) tiene multiplicidad \(k\), la solución general de la ecuación diferencial debe contente la combinación lineal siguiente
+		\setcounter{enumi}{1}
+		\item Cuando la raíz real \(m_1\) tiene multiplicidad \(k\), la solución general de la ecuación diferencial debe contenter la sig. combinación lineal
 			\[
-				c_1e^{m_jx} + c_2xe^{m_jx} +c_3x^2e^{m_jx} + \;\cdots\; + c_{k} x^{k-1} e^{m_jx}.
+				c_1e^{m_1x} + c_2xe^{m_1x} +c_3x^2e^{m_1x} + \;\cdots\; + c_{k} x^{k-1} e^{m_1x}.
 			\]
-		\item La ecuación característica tiene raíces complejas. Puesto que las raíces complejas aparecen en pares, la solución general deberá contener lo siguiente.
+		\item La ecuación característica tiene raíces complejas. Puesto que las raíces complejas aparecen en pares, la solución general deberá contener:
 			\begin{itemize}
-				\item Si la multiplicidad de las raíces \(m_1= \alpha +i \beta\), \(m_2= \alpha -i \beta\), es \(1\):
+				\setlength{\itemindent}{-1em}
+				\item Si la multiplicidad de las raíces \(m_1= \alpha +i \beta\) y \(m_2= \alpha -i \beta\), es \(1\):
 					\[
-						c_1e^{\alpha x} \cos \beta x+ c_2 e^{\alpha x} \sin \beta x.
+						c_1e^{\alpha x} \cos \beta x+ c_2 e^{\alpha x} \sin \beta x. \hspace{5mm} c_1,c_2 \in \mathbb{R}
 					\]
 				\item Si la multiplicidad de las raíces \(m_1= \alpha +i \beta\), \(m_2 = \alpha - i \beta\), es \(k\):
 					\[
@@ -331,8 +332,12 @@
 		\begin{enumerate}
 			\item \(\dfrac{d^4y}{dx^4} +4 \dfrac{d^2y}{dx^2} +4y=0\).
 			\item \(y''' + 3y'' -4y=0\).
+			\item \(y''' +3y'' -4y=0\).
+			\item Suponga que las soluciones dela ec. característica de una E.D. son \(-1,0,3+2i, \pi , -1 +i\).
 		\end{enumerate}
 	\end{example}
+\end{frame}
+\begin{frame}
 \end{frame}
 % )))
 
