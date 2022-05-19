@@ -1,0 +1,27 @@
+
+% === DATOS === (((
+\title{Movimiento Vibratorio de Sistemas Mecánicos.}
+\author{Sandra Elizabeth Delgadillo Alemán.}
+\institute{Universidad Autónoma de Aguascalientes.}
+% \date{}
+% )))
+
+% === PAQUETES === (((
+% \usepackage{wasysym}
+\usetheme{Warsaw}
+\setbeamertemplate{enumerate items}[circle] % esto lo estoy usando para los simbolos de enumeración.
+% )))
+
+% === COMANDOS === (((
+\newcommand\Myref[1]{
+  \begingroup
+  \usebeamerfont*{item projected}%
+  \usebeamercolor[bg]{item projected}%
+  \begin{pgfpicture}{-1ex}{0ex}{1ex}{2ex}
+    \pgfpathcircle{\pgfpoint{0pt}{.75ex}}{1.2ex}
+    \pgfusepath{fill}
+    \pgftext[base]{\color{fg}\ref{#1}}
+  \end{pgfpicture}%
+  \endgroup
+}
+% )))

@@ -1,0 +1,101 @@
+\documentclass{beamer}
+\input{preamble.tex}
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Movimiento Vibratorio de Sistemas Mecánicos.} % (((
+\begin{frame}[t]
+	\frametitle{Movimiento Vibratorio de Sistemas Mecánicos.}
+	Suponga una masa \(m\) unida a un resorte flexible colgado sobre un soporte rígido. La distancia de alargamiento dependerá de la masa. Según la Ley de Hooke, el resorte mismo ejerce una fuerza de restitución opuesta a la dirección de alargamiento y proporcional al dicho alargamiento \(S\), es decir:
+	\[
+		F=kS \;,\; k = \mbox{constante del resorte.}
+	\]
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width= 0.8 \linewidth]{IMAGENES/1/tikz.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{columns}
+		\column{0.3\textwidth}
+		Equilibrio
+		\[
+			\begin{array}{rcl}
+				F_g-F_R & = & 0 \\
+				F_g-kS & = & 0 \\
+				\iff mg = kS.
+			\end{array}
+		\]
+		\column{0.3\textwidth}
+		Movimiento
+		\[
+			\begin{array}{rcl}
+				F_T & = & F_g-F_R \\
+				F_T & = & mg - k(S+x) \\
+				F_T & = & mg - kS-kx \\
+				F_T & = & -kx.
+			\end{array}
+		\]
+	\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{block}{}
+		Por la \(2^{da}\) Ley de Newton \(F_T = ma = m \dfrac{dv}{dt} = m \dfrac{d^2x}{dt^2}\). Luego, igualando \(F_T = m \dfrac{d^2x}{dt^2} = -kx\), \(k,m >0\),
+		\[
+			\iff m \dfrac{d^2x}{dt^2} +kx =0 \iff \dfrac{d^2x}{dt^2} + \underbrace{\dfrac{k}{m}} _{w^2 = k/m >0}  x =0
+		\]
+		Luego, la ecuación que describe el movimiento de \(m\) está dada por
+		\begin{center}
+			\color{red} \fbox{\color{black} \(\dfrac{d^2x}{dt^2} + w^2x =0\)} \\
+			\footnotesize E.D. para describir el Movimiento Armónico Simple.
+		\end{center} 
+		Resolvemos la E.D. usando la ecuación característica \(m^2+w^2=0 \iff m^2=-w^2 \iff m_{1,2} = \pm iw\), \(\alpha =0\), \(\beta =w\).
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{block}{}
+		Luego, la solución general de la E.D. de movimiento es: \(x(t) = c_1 \cos t + c_2 \sin wt\). \\[2mm]
+		Establecemos las condiciones iniciales como \(x(0) = x_0\), \(x' (0) = x_1\), aplicando las CI's.
+		\[
+			\begin{array}{rcl}
+				x' (t) & = & -w c_1 \sin w t -w c_2 \cos w t \\[2mm]
+				x(0) & = & c_1 \cos (0)+c_2 \sin (0) = x_0 \\[2mm]
+				x'(0) & = & -wc_1 \sin w(0)+wc_2 \cos w(0) = x_1
+			\end{array}
+		\]
+		\begin{center}
+			\(\therefore \hspace{5mm}\) \color{red} \fbox{\color{black} \( x(t) = x_0 \cos wt+ \dfrac{x_1}{w} \sin wt\)}\\
+			\hspace{5mm} \footnotesize Ecuación de movimiento armónico simple. \\[2mm]
+			\color{black} \normalsize \(x(t)= A \sin (wt+ \phi ) \hspace{1cm} A = \sqrt{x_0^2+(x_1/w) ^2}\).\\
+			\color{red} \hspace{4cm} \footnotesize Amplitud.
+		\end{center}
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{block}{}
+		\[
+			\phi = \tan ^{-1} \bigg(\dfrac{x_0w}{x_1}\bigg) \hspace{4mm} T = \dfrac{2 \pi}{w} \;,\;  [T] = seg \hspace{4mm} f = \dfrac{w}{2 \pi} \;,\; [f] = 1/s = Hz.
+		\]
+		\color{red} \hspace{1cm} \footnotesize Angulo de fase \hspace{1.3cm} Periodo \hspace{1.5cm} Frecuencia.
+		\begin{figure}[hbt!]
+			\centering
+			\includegraphics[width= 0.5 \linewidth]{IMAGENES/2/tikz.pdf}
+		\end{figure}
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		Una masa que pesa \(2lb\) hace que un resorte se estire \(6\;in\).
+		Cuando \(t=0\)  la masa se suelta desde un punto a \(8i\;n\) abajo de la posición de equilibrio con una velocidad hacia arriba de \(4/3\;ft/s\).
+		Deduzca la ecuación de movimiento libre.
+	\end{example}
+\end{frame}
+% )))
+
+\end{document}

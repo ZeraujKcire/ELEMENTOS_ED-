@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[>=latex]
+	\draw [thick ,->] (-8,0) -- (8,0);
+	\draw [->] (-4.65,-4) -- (-4.65,4);
+	\draw [yscale=1.5,domain=-4.65:6, samples = 200] plot(\x , {cos(deg(3*\x))+0.5*sin(deg(\x))+sin(deg(0.5*\x))});
+\end{tikzpicture}
+
+\end{document}

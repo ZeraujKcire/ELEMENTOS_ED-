@@ -1,0 +1,13 @@
+\documentclass[margin=0.1in]{standalone}
+\input{preamble.tex}
+\begin{document}
+
+\begin{tikzpicture}[>=latex]
+	\ejes
+	\draw [blue, thick] (1,1) parabola bend (2.25,1.5) (3.5,1) node [above left=5mm] {\tiny Sol. el P.V.I.};
+	\draw [blue, thick] (-0.5,1) parabola bend (0.25,0.7) (1,1);
+	\draw [dashed] (1,0) node [below] {\tiny \(x_0\)} -- (1,1) -- (0,1) node [above left] {\tiny \(y_0\)};
+	\fill [red] (1,1) circle (2pt);
+\end{tikzpicture}
+
+\end{document}
