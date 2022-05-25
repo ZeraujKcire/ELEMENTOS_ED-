@@ -1,0 +1,15 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+
+\begin{document}
+
+\begin{tikzpicture}[>=latex]
+	\draw [->] (0,-2.5) -- (0,2.5);
+	\draw [->] (-1,0) -- (5,0);
+	\draw [dash pattern = on 5pt off 1pt, domain=-1:5] plot(\x ,  {exp(-0.5*\x)});
+	\draw [dash pattern = on 5pt off 1pt, domain=-1:5] plot(\x , {-exp(-0.5*\x)});
+	\draw [thick , red , domain=-1:4.7, samples = 100] plot(\x , {exp(-0.5*\x) * sin(4*\x r)});
+\end{tikzpicture}
+
+\end{document}

@@ -262,18 +262,232 @@
 			\item \(2y'' -3y' +4y=0\).
 			\item \(y'' +4y' -2y=0\).
 		\end{enumerate}
+		\textbf{Solución.} \begin{enumerate}
+			\item Supongamos que \(y(x) = e^{mx}\) es la solución de la E.D. 
+				\[
+					\begin{array}{rcl}
+						(m^2e^{mx}) - 10(me^{{mx}}) + 25(e^{mx}) & = & 0 \\[2mm]
+						\iff m^2e^{mx} - 10m e^{mx} + 25e^{mx} & = & 0 \\[2mm]
+						\iff e^{mx} (m^2-10m+25) & = & 0 \hspace{5mm} e^{mx} >0 \;,\; \forall x\\[2mm]
+						\iff \underbrace{\begin{matrix} m^2-10m+25 & = & 0 \end{matrix}} _{\mbox{Ec. Característica}} \hspace{-12mm}
+					\end{array}
+				\]
+		\end{enumerate}
 	\end{example}
 \end{frame}
 \begin{frame}[t]
+	\begin{exampleblock}{}
+		\[
+			\begin{array}{rcl}
+				\iff (m-5) ^2 & = & 0 \\[2mm]
+				m-5 & = & 0 \\[2mm]
+				m & = & 5, \mbox{ de multiplicidad } 2.
+			\end{array}
+		\]
+		O bien, \(m_1=5=m_2\). \\[2mm]
+		Luego se tiene \(y_1(x) = e^{5x}\) y \(y_2(x) = xe^{5x}\), que son L.I. Por lo tanto, la solución general de la E.D. 
+		\[
+			y(x) = c_1e^{5x} + c_2xe^{5x} , \hspace{5mm} c_1,c_2, \mbox{ constantes arbitrarias.} 
+		\]
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+		\item Supongamos que \(y(x) = e^{mx}\).
+			\[
+				\begin{array}{rcl}
+					y\,' (x) & = & me^{mx} \\[2mm]
+					y\,'' (x) & = & m^2e^{mx} .
+				\end{array}
+			\]
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		Sustituyendo \(y\), \(y\,'\), \(y\,''\) en la E.D. 
+		\[
+			\begin{array}{rcl}
+				2m^2e^{mx} -3me^{mx} +4e^{mx} & = & 0 \\[2mm]
+				\iff e^{mx} (2m^2-3m+4) & = & 0 \hspace{5mm} e^{mx} >0 \;,\; \forall x\\[2mm]
+				\iff \underbrace{\begin{matrix} 2m^2-3m+4 & = & 0 \end{matrix}} _{\mbox{Ec. Característica}} \hspace{-12mm}
+			\end{array}
+		\]
+		\(y(x) = e^{mx}\) es la solución de la E.D. siempre y cuando \(m\) es raíz de la ecuación característica. Usamos la fórmula general para encontrar las raíces.
+		\[
+			\begin{array}{rcl}
+				m_{1,2} & = & \dfrac{-(-3) \pm \sqrt{(-3) ^2-4(2) (4)}}{2(2)} \\[2mm]
+				& = & \dfrac{3 \pm \sqrt{9-32}}{4} = \dfrac{3 \pm \sqrt{-23}}{4} = \dfrac{3}{4} \pm \dfrac{\sqrt{-1} \sqrt{23}}{4}
+			\end{array}
+		\]
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\(m_{1,2} = \dfrac{3}{4} \pm i \dfrac{\sqrt{23}}{4}\), \(\alpha = Re(m_1) = \dfrac{3}{4}\), \(\beta = Im(m_1) = \dfrac{\sqrt{23}}{4}\). \\[2mm]
+		Luego, se tienen dos soluciones reales de la forma
+		\[
+			y_1(x) = e^{\frac34 x} \cos \dfrac{\sqrt{23}}{4} x \;,\; y_2(x) = e^{\frac 34x} \sin \dfrac{\sqrt{23}}{4} x. \hspace{5mm} L.I.
+		\]
+		Por tanto \(\{y_1,y_2\}\) conforman un c.f.s Por lo cual, la solución general de la E.D. es:
+		\[
+			y(x) = c_1e^{\frac 34x} \cos \dfrac{\sqrt{23}}{4} x + c_2 e^{\frac 34x} \sin \dfrac{\sqrt{23}}{4} x, \hspace{5mm} c_1,c_2 \mbox{ constantes arb.} \vspace{-5mm}
+		\]
+		\begin{enumerate}
+			\setcounter{enumi}{2}
+		\item Suponiendo \(y(x) = e^{mx}\).
+			\[
+				\begin{array}{rcl}
+					y\,' (x) & = & me^{mx} \\
+					y\,'' (x) & = & m^2e^{mx}
+				\end{array}
+			\]
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		Sustituyendo en la E.D.
+		\[
+			\begin{array}{rcl}
+				m^2e^{mx} +4(me^{mx}) -2(e^{mx}) & = & 0 \\[2mm]
+				\iff e^{mx} (m^2+4m-2) & = & 0 \\[2mm]
+				\iff \underbrace{\begin{matrix} m^2+4m-2 & = & 0 \end{matrix} } _{\mbox{Ec. Característica}} \hspace{-12mm}
+			\end{array}
+		\]
+		Obtenemos raíces
+		\[
+			\begin{array}{rcl}
+				m_{1,2} & = & \dfrac{-4 \pm \sqrt{4^2-4(1) (2)}}{2(1)} \\[2mm]
+				& = & \dfrac{-4 \pm \sqrt{16+8}}{2} = \dfrac{-4 \pm \sqrt{24}}{2} = \dfrac{-4}{2} \pm \dfrac{\sqrt{24}}{2}
+			\end{array}
+		\]
+		\(m_{1,2} = -2 \pm \sqrt{6} \;\implies\; \begin{cases}
+			m_1 = -2 + \sqrt{6},\\
+			m_2 = -2 - \sqrt{6}.
+		\end{cases}\)
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		Luego, se tienen dos soluciones
+		\[
+			y_1(x) = e^{(-2+ \sqrt{6}) x}, \hspace{5mm} y_2(x) = e^{(-2- \sqrt{6}) x}.
+		\]
+		Luego, la solución general de la E.D. es:
+		\[
+			y(x) = c_1e^{(-2+ \sqrt{6}) x} + c_2e^{(-2- \sqrt{6}) x}, \hspace{5mm} c_1,c_2 \mbox{ constantes arbitrarias.}
+		\]
+	\end{exampleblock}
 \end{frame}
 
 \begin{frame}[t]
 	\begin{alertblock}{Ejercicio.}
-		Determine la solución del P.V.I. \(4y'' +4y' +17y=0\), con \(y(0) =1\), y \(y'(0) =2\). Además, esboce la gráfica de la curva solución.
+		Determine la solución del P.V.I. \(4y'' +4y' +17y=0\), con \(y(0) =1\), y \(y'(0) =2\). Además, esboce la gráfica de la curva solución. \\[2mm]
+		\textbf{Solución.} Suponiendo que \(y(x) = e^{mx}\),
+		\[
+			\begin{array}{rcl}
+				y\,' (x) & = & me^{mx} \\[2mm]
+				y\,'' (x) & = & m^2e^{mx} .
+			\end{array} \vspace{-3mm}
+		\]
+		Sustituyendo en la E.D.
+		\[
+			\begin{array}{rcl}
+				4(m^2e^{mx}) +4(me^{mx}) +17(e^{mx}) & = & 0 \\[2mm]
+				\iff 4m^2e^{mx} +4me^{mx} +17e^{mx} & = & 0 \\[2mm]
+				\iff e^{mx} (4m^2+4m+17) & = & 0 \\[2mm]
+				\iff \underbrace{\begin{matrix} 4m^2+4m+17 & = & 0\end{matrix}} _{\mbox{Ecuación característica}} \hspace{-12mm}
+			\end{array}
+		\]
 	\end{alertblock}
 \end{frame}
+
 \begin{frame}[t]
+	\begin{alertblock}{}
+		Encontramos las raíces
+		\[
+			\begin{array}{rcl}
+				m_{1,2} & = & \dfrac{-4 \pm \sqrt{4^2-4(4) (17)}}{2(4)} \\[2mm]
+				& = & \dfrac{-4 \pm \sqrt{16-272}}{8} = \dfrac{-4 \pm \sqrt{-256}}{8} = \dfrac{-4 \pm \sqrt{-1} \sqrt{256}}{8} \\[2mm]
+				m_{1,2} & = & \dfrac{4}{8} \pm \dfrac{i \sqrt{256}}{8} \;,\; \alpha = Re(m_1) = - \dfrac{4}{8} \;,\; \beta = Im(m_1) = \dfrac{\sqrt{256}}{8}
+			\end{array}
+		\]
+		\[
+			\alpha = Re(m_1) = -1/2 \hspace{5mm} \beta = Im(m_1) = 2.
+		\]
+		Luego, se tienen dos soluciones reales de la forma
+		\[
+			y_1(x) = e^{-1/2x} \cos 2x \hspace{5mm} y_2(x) = e^{-1/2x} \sin 2x. \hspace{5mm} L.I.
+		\]
+		Por tanto \(\{y_1,y_2\}\) conforman un c.f.s. por lo cual, la solución general de la E.D. es:
+	\end{alertblock}
 \end{frame}
+
+\begin{frame}[t]
+	\begin{alertblock}{}
+		\begin{center}
+			\(y(x) = c_1e^{-1/2x} \cos 2x +\) \color{red} \underline{\color{black} \(c_2e^{-1/2x} \sin 2x\)}
+		\end{center}
+		Para obtener la solución del P.V.I. aplicamos las C.I. dadas:
+		\begin{enumerate}
+			\item Aplicando \(y(0) = 1\).
+				\[
+					\begin{array}{rcl}
+						y(0) = \cancelto{c_1}{c_1e^{-1/2(0)} \cos (0)} + c_2 \cancelto{0}{e^{-1/2(0)} \sin (0)} & = & 1 \\[2mm]
+						c_1 & = & 1.
+					\end{array}
+				\]
+			\item Aplicando \(y\,' (0) = 2\). \\[2mm]
+				Primero, obtenemos \(y\,'(x)\).
+				\[
+					\begin{array}{rcl}
+						y\,'(x) & = & \hphantom{+} c_1 \big\{e^{-1/2 x} (-2 \sin 2x) + \cos 2x \big(-\frac12 e^{-1/2x}\big)\big\} \\[2mm]
+						&& +c_2 \big\{e^{-1/2x} (2 \cos 2x) + \sin 2x \big(- \frac12 e^{-1/2x}\big)\big\}
+					\end{array}
+				\]
+		\end{enumerate}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{alertblock}{}
+		\[
+			\begin{array}{rcl}
+				y\,' (x) & = & -2c_1e^{- \frac 12x} \sin 2x - \dfrac{1}{2} c_1 e^{- \frac 12x} \cos 2x \\[2mm]
+				&& + 2c_2e^-{\frac 12x} \cos 2x - \dfrac{1}{2} c_2e^{- \frac 12x} \sin 2x , \hspace{5mm} \fbox{\(c_1=1\)} \\[2mm]
+				y\,' (x) & = & e^{- \frac 12x} \big(-2 \sin 2x - \frac 12 \cos 2x + 2c_2 \cos 2x - \frac 12c_2 \sin 2x\big)
+			\end{array}
+		\]
+		Aplciando \(y\,' (0) =2\)
+		\[
+			\begin{array}{rcl}
+				y\,' (0) & = & \cancelto{1}{e^{- \frac 12(0)}}  \big(-2 \cancelto{0}{\sin 2(0)} - \cancelto{-1/2}{\frac 12 \cos 2(0)} \\[2mm]
+				&& + \cancelto{2c_2}{2c_2 \cos 2(0)} - \frac 12c_2 \cancelto{0}{\sin 2(0)}\big) \\[2mm]
+				2 & = & 2c_2-1/2 \\[2mm]
+				2c_2 & = & 5/2 \\[2mm]
+				\underline{\begin{matrix} c_2 & = & 5/4\end{matrix}} \hspace{-1.6cm}
+			\end{array}
+		\]
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{alertblock}{}
+		\(\therefore \hspace{5mm}\) La solución del P.V.I. es:
+		\begin{center}
+			\color{red} \underline{\color{black} \(y(x) = e^{-1/2x} \cos 2x+ \frac 54 e^{-1/2x} \sin 2x\)} \\[2mm]
+			\color{black} \(y(x) = e^{- \frac 12 x} \underbrace{\big(\cos 2x+ \frac 54 \sin 2x\big)} _{A \sin (2x+ \phi)}\) 
+		\end{center} \vspace{-5mm}
+		\begin{figure}[hbtp!]
+			\centering
+			\includegraphics[width= 0.5 \linewidth]{IMAGENES/1/tikz.pdf}
+		\end{figure}
+	\end{alertblock}
+\end{frame}
+
 % )))
 
 \section{E.D.L.H. de Orden Superior.} % (((

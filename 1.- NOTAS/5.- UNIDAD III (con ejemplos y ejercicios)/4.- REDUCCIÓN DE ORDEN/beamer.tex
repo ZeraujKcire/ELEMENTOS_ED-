@@ -100,15 +100,77 @@
 		Así pues, \(\{y_1,y_2\}\) conforman una c.f.s y la solución general de la E.D. está dado por la combinación lineal de éstas.
 	\end{block} \vspace{2mm}
 	\begin{example}
-		Sea \(y_1(x) = x^2\) una solución de la E.D. \(x^2y'' -2xy' +4y=0\). Determine la solución general de la E.D. en el intervalo \(I=(0, \infty)\).
+		Sea \(y_1(x) = x^2\) una solución de la E.D. \(x^2y'' -3xy' +4y=0\). Determine la solución general de la E.D. en el intervalo \(I=(0, \infty)\). \\[2mm]
+		\textbf{Solución.} La E.D. en su forma estándar está dada por
+		\[
+			y\,'' - \underbrace{\dfrac{3}{x} } _{p(x)} y\,' + \dfrac{4}{x^2} y =0.
+		\]
 	\end{example}
 \end{frame}
+
 \begin{frame}[t]
+	\begin{exampleblock}{}
+		\[
+			\begin{array}{rcl}
+				\mu (x) = \dis\int \dfrac{e^{- \dis\int p(x) dx}}{y^2(x)} dx = \dis\int \dfrac{e^{- \int \frac{-3}{x} dx}}{(x^2) ^2} dx & = & \dis\int \dfrac{e^{3 \ln x}}{x^4} dx \\[2mm]
+				& = & \dis\int \dfrac{x^3}{x^4} dx \\[2mm]
+				& = & \dis\int \dfrac{1}{x} dx \\[2mm]
+				& = & \ln x.
+			\end{array}
+		\]
+		\(\therefore \hspace{5mm} y_2(x) = (\ln x) x^2 = x^2 \ln x \). \\[2mm]
+		Verifiquemos que \(y_1(x) = x^2\), y \(Y_2(x) = x^2 \ln x\) conforman un c.f.s. \\[2mm]
+		Es fácil verificar que \(y_1,y_2\) son soluciones de la E.D. Veamos que son L.I. usando el wronskiano.
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\[
+			\begin{array}{rcl}
+				W[y_1,y_2] (x) & = & \begin{vmatrix}
+					x^2 & x^2 \ln x \\
+					2x & x+2x \ln x 
+				\end{vmatrix} \\[5mm]
+				& = & x^2(x+ 2x \ln x) - 2x(x^2 \ln x) \\[2mm]
+				& = & x^3+ \cancel{2x^3 \ln x} - \cancel{2x^2 \ln x} = x^3 \ne 0.
+			\end{array}
+		\]
+		\(y_1,y_2\) son L.I. \(\forall x \in (0, \infty)\). \\[2mm]
+		Por consiguiente, \(y_1,y_2\) conforman un c.f.s y la sol. gral. está dada por
+		\[
+			y(x) = c_x^2+c_2x^2 \ln x, \hspace{5mm} c_1,c_2 \mbox{ constantes arbitrarias}.
+		\]
+	\end{exampleblock}
 \end{frame}
 
 \begin{frame}[t]
 	\begin{alertblock}{Ejercicio.}
-		Si \(y_1(x) = e^x\) es solución de \(y'' -y=0\), en el intervalo \((- \infty , \infty)\). Aplique reducción de orden para determinar \(y_2(x)\), L.I. a \(y_1(x)\) y determine explícitamente la solución general de la E.D. dadas.
+		Si \(y_1(x) = e^x\) es solución de \(y'' -y=0\), en el intervalo \((- \infty , \infty)\). Aplique reducción de orden para determinar \(y_2(x)\), L.I. a \(y_1(x)\) y determine explícitamente la solución general de la E.D.
+	\end{alertblock}
+	\begin{alertblock}{}
+		\textbf{Solución.} \(y\,'' + \underbrace{0} _{p(x)} y\,' \underbrace{-} _{q(x)} y =0\). \vspace{-5mm}
+		\[
+			y_2(x) = \mu (x) \cdot y_1(x), \hspace{5mm} \mu (x) = \dis\int \dfrac{e^{-\int p(x) dx}}{y_1^2} dx.
+		\]
+		\[
+			\begin{array}{rcl}
+				\mu (x) = \dis\int \dfrac{e^{-\int 0 dx}}{(e^x) ^2} dx = \dis\int \dfrac{e^0}{e^{2x}} dx & = & \dis\int \dfrac{1}{e^{2x}} dx \\[2mm]
+				& = & \dis\int e^{-2x} dx \\[2mm]
+				& = & - \dfrac{1}{2} \dis\int -2e^{-2x} dx \\[2mm]
+				& = & - \dfrac{1}{2} e^{-2x} .
+			\end{array}
+		\]
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{alertblock}{}
+		Luego \(\{y_1,y_2\}\) son dos soluciones L.I. para la E.D. de segundo orden.
+		\begin{center}
+			\(\therefore \hspace{5mm}\) conforman un c.f.s. \\[2mm]
+			\color{red} \underline{\color{black} \(\therefore \hspace{5mm} y(x) = c_1e^x-c_2e^{-x}\)} sol. gral. explícita de la E.D. 
+		\end{center}
 	\end{alertblock}
 \end{frame}
 

@@ -36,7 +36,7 @@
 		\[
 			y(x) = c_1y_1(x) + c_2y_2(x) + \;\cdots\; c_ky_k(x).
 		\]
-		Es solución de la E.D. homogénea, donde \(c_1, \;\ldots,\; c_k\) son constantes abritrarias.
+		Es solución de la E.D. homogénea, donde \(c_1, \;\ldots,\; c_k\) son constantes arbitrarias.
 	\end{block}
 \end{frame}
 
@@ -48,11 +48,25 @@
 		\end{enumerate}
 	\end{corollary} 
 	\begin{example}
-		Las funciones \(y_1(x) = x^2\), \(y_2(x) =x^2 \ln x\) son soluciones de la ecuación diferencial lineal homogénea \(x^3y''' -2xy' +4y=0\), en \((0, \infty)\). Determina un número infinito de soluciones usando el prinicipio de superposición.
+		Las funciones \(y_1(x) = x^2\), \(y_2(x) =x^2 \ln x\) son soluciones de la ecuación diferencial lineal homogénea \(x^3y''' -2xy' +4y=0\), en \((0, \infty)\). Determina un número infinito de soluciones usando el principio de superposición.
 	\end{example}
+	\begin{exampleblock}{}
+		\textbf{Solución.} Usando el principio de superposición \(y(x) = c_1x^2+c_2x^2 \ln x\), \(c_1,c_2\) constantes arbitrarias. Con ésta expresión se tiene un número infinito de soluciones de la ecuación diferencial. \\[2mm]
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
 	\begin{example}
 		Si \(y(x) = e^{7x}\) es solución de la ecuación diferencial \(y'' -9y' +14y=0\), encuentra 3 soluciones de la ecuación diferencial.
 	\end{example}
+	\begin{exampleblock}{}
+		\textbf{Solución.} 
+		\begin{enumerate}
+			\item \(y_1(x) = 3e^{7x}\).
+			\item \(y_2(x) = 0\).
+			\item \(y_3(x) = - \sqrt{2} e^{7x}\).
+		\end{enumerate}
+	\end{exampleblock}
 \end{frame}
 
 \begin{frame}[t]
@@ -63,7 +77,7 @@
 		\]
 		Si el conjunto no es LD en el intervalo \(I\), se considera que es \textbf{linealmente independiente} (LI), (es decir, cuando las únicas constantes para que se cumpla que la combinación lineal sea cero, son \(c_1=c_2= \;\cdots\; c_n=0\)).
 	\end{block} 
-	En partiular, nos interesa determinar cuando son LI y eso puede determinarse mecánicamente recurriendo a un determinante llamado \textbf{Wronskaino}.
+	En particular, nos interesa determinar cuando son LI y eso puede determinarse mecánicamente recurriendo a un determinante llamado \textbf{Wronskaino}.
 \end{frame}
 
 \begin{frame}[t]
@@ -88,8 +102,8 @@
 	\begin{block}{Conjunto Fundamental de Soluciones.}
 		\textbf{Definición.} Es un conjunto de \(n\) soluciones LI de la ecuación diferencial homogénea de orden \(n\) en un intervalo \(I\).
 	\end{block}
-	\begin{block}{Solución General de unua E.D. Homogénea.}
-		\textbf{Definición.} Sean \(y_1, \;\ldots,\; y_n\) un conjunto de funcamental de soluciones de la E.D. homogénea de orden \(n\), en un intervalo \(I\). Entonces la solución geneal de la ecuación en el intervalo es:
+	\begin{block}{Solución General de una E.D. Homogénea.}
+		\textbf{Definición.} Sean \(y_1, \;\ldots,\; y_n\) un conjunto de fundamental de soluciones de la E.D. homogénea de orden \(n\), en un intervalo \(I\). Entonces la solución general de la ecuación en el intervalo es:
 		\[
 			y(x) = c_1y_i(x) + \;\cdots\; +c_ny_n(x).
 		\]
@@ -121,29 +135,54 @@
 	\begin{exampleblock}{}
 		\textbf{Solución.} Veamos si \(y_1\) y \(y_2\) son L.I. usando el Wronskiano.
 		\[
-			\begin{array}{rcl}
-				W[y_1,y_2] (x) & = & \begin{vmatrix}
+			\begin{array}{rl}
+				W[y_1,y_2] (x) & = \begin{vmatrix}
 					e^{x/2} & xe^{x/2} \\
 					1/2e^{x/2} & 1/2xe^{x/2} +e^{x/2}
 				\end{vmatrix}\\[6mm]
-				& = & e^{x/2} (1/2xe^{x/2} +e^{x/2}) -1/2e^{x/2} (xe^{x/2}) \\[2mm]
-				& = & 1/2xe^x+e^x-1/2xe^x = e^x \ne 0, \hspace{5mm} \forall x \in (- \infty , \infty) .
+				& = e^{x/2} (1/2xe^{x/2} +e^{x/2}) -1/2e^{x/2} (xe^{x/2}) \\[2mm]
+				& = 1/2xe^x+e^x-1/2xe^x = e^x \ne 0, \forall x \in (- \infty , \infty) .
 			\end{array}
 		\]
 		\(\therefore \hspace{5mm} y_1\) y \(y_2\) son linealmente independientes (L.I.) Luego \(\{y_1,y_2\}\) conforman un conjunto fundamental de soluciones y por consiguiente la solución general de la E.D. está dada por
 		\[
-			y(x) = c_1e^{x/2} + c_2e^{x/2} , \hspace{5mm} c_1,c_2 \mbox{ constantes arbitrarias.}
+			y(x) = c_1e^{x/2} + c_2xe^{x/2} , \hspace{5mm} c_1,c_2 \mbox{ constantes arbitrarias.}
 		\]
 	\end{exampleblock}
 \end{frame}
 
 \begin{frame}[t]
 	\begin{alertblock}{Ejercicio.}
-		Sea \(y_2(x) = e^x \cos 2x\) , \(y_2(x) = e^x \sin 2x\) soluciones de la E.D.L.H. \(y'' +2y' +5y=0\) en el intervalo \((- \infty , \infty)\). Compruebe que el conjunto que contiene a \(y_1,y_2\) es un conjunto fundamental de soluciones y escriba explícitamente la solución general de la E.D.
+		Sea \(y_2(x) = e^x \cos 2x\) , \(y_2(x) = e^x \sin 2x\) soluciones de la E.D.L.H. \(y'' +2y' +5y=0\) en el intervalo \((- \infty , \infty)\).
+		Compruebe que el conjunto que contiene a \(y_1,y_2\) es un conjunto fundamental de soluciones y escriba explícitamente la solución general de la E.D.\\
+		\textbf{Solución.} Veamos si \(y_1\) y \(y_2\) son L.I.  \vspace{-3mm}
+		\[
+			\begin{array}{rl}
+				W[y_1,y_2] (x) = & \begin{vmatrix}
+					e^x \cos 2x & e^x \sin 2x \\
+					-2e^x \sin 2x+e^x \cos 2x & 2e^x \cos 2x+e^x \sin 2x
+				\end{vmatrix}\\[2mm]
+				 = & e^x \cos 2x(2e^x \cos 2x+e^x \sin 2x) - \\[2mm]
+				& - (-2e^x \sin 2x+ e^x \cos 2x) e^x \sin 2x \\[2mm]
+				 = & 2x^{2x} \cos ^22x+ \cancel{e^{2x} \cos 2x \sin 2x} +2e^{2x} \sin ^2 2x  \\[2mm]
+				& - \cancel{e^{2x} \cos 2x \sin 2x} \\[2mm]
+				 = & 2e^{2x} \cos ^22x +2e^{2x} \sin ^22x \\
+				 = & 2e^{2x} \cancelto{1}{(\cos ^22x+ \sin ^22x)} = 2e^{2x} \ne 0.
+			\end{array} \vspace{-4mm}
+		\]
+		\(e^{2x} \ne 0\), \(\forall x \in (- \infty , \infty)\).
 	\end{alertblock}
+\end{frame}
+
+\begin{frame}[t]
 	\begin{alertblock}{}
-		\textbf{Solución.} Veamos si \(y_1\) y \(y_2\) son L.I. 
-		
+		\begin{center}
+			\(\therefore \hspace{5mm} y_1 \;,\; y_2\) son L.I.
+		\end{center}
+		Dado que la E.D. es de \(2^{do}\) orden, entonces \(\{y_1,y_2\}\) conforman una C.F.S y por coniguiente la solución general de la E.D. está dada por
+		\begin{center}
+			\color{red} \underline{\color{black} \(y(x) = c_1e^x \cos 2x+c_2e^x \sin 2x\)}\color{black}, \(c_1,c_2\) constantes abritrarias.
+		\end{center}
 	\end{alertblock}
 \end{frame}
 
