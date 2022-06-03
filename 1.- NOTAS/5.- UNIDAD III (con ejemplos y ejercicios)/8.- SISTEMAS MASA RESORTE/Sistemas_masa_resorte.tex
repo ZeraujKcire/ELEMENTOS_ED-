@@ -119,10 +119,46 @@
 
 \begin{frame}[t]
 	\begin{alertblock}{Ejercicio.}
-		Un contrapeso de \(8lb\) estira \(2ft\) a un resorte. Si una fuerza de amortiguamiento numéricamente igual a \(2x\,'\) actúa sobre el sistema, deduzca la ecuación del movimiento si el contrapeso se suelta de la posición de equilbrio con una velocidad hacia arriba de \(3ft/s\).
+		Un contrapeso de \(8lb\) estira \(2ft\) a un resorte.
+		Si una fuerza de amortiguamiento numéricamente igual a \(2x\,'\) actúa sobre el sistema, deduzca la ecuación del movimiento si el contrapeso se suelta de la posición de equilbrio con una velocidad hacia arriba de \(3ft/s\). \\[2mm]
+		\textbf{Solución.} \(mg=8lb\), \(s=2ft\), \(\beta = 2\), \(x(0) = 0\), \(x\,'(0) =-3ft/s\). La fuerza total que se ejerce sobre el cuerpo es:
+		\begin{minipage}{0.7\linewidth}
+		\[
+			F_T = -kx- \beta \,'x.
+		\]
+			Por la segunda ley de Newton:
+			\[
+				\begin{array}{rcl}
+					F_T = ma & = & mx\,'' \\[2mm]
+					\iff mx'' & = & -kx - \beta x' \\[2mm]
+					mx'' + \beta x' + kx & = & 0
+				\end{array}
+			\]
+		\end{minipage}
+		\begin{minipage}{0.2\linewidth}
+			\includegraphics[height = 4.5cm]{IMAGENES/6/tikz.pdf}
+		\end{minipage}
 	\end{alertblock}
 \end{frame}
+
 \begin{frame}[t]
+	\begin{alertblock}{}
+		Calculemos \(m\) y \(k\). \\[2mm]
+		\[
+			m = \dfrac{8lb}{32.2ft/s^2} = 0.2484 slug.
+		\]
+		De la Ley de Hooke:
+		\[
+			mg  = kS \;\implies\; k = \dfrac{mg}{S} = \dfrac{8lb}{2ft} = 4lb/ft.
+		\]
+		Luego, la E.D. que modela el sistema masa-resorte
+		\[
+			\begin{array}{rcl}
+				0.2484x'' + 2x' +4x & = & 0 \\[2mm]
+				x'' + 8x' +16x & = & 0. \\ \hline
+			\end{array}
+		\]
+	\end{alertblock}
 \end{frame}
 
 \begin{frame}[t]
@@ -194,7 +230,7 @@
 			x(t) = \color{red} \underbrace{\color{black} c_1e^{r_1t} + c_2e^{r_2 t}} _{x_c(t)} \color{black}{+} \color{red} \underbrace{\color{black} R \cos (wt- \varphi)} _{x_p(t)}.
 		\]
 		Donde \(r_1\) y \(r_2\) satisfacen la ecuación característica asociada con la ecuación homogénea y en cualquier caso \(x_c(t) \longrightarrow 0\) cuando \(t \longrightarrow \infty\). \\[2mm]
-		Por lo que se le conoce como \textbf{solución transitoria}. A \(x_p(t )\) que representa la oscilacij́on estable con la misma frecuencia que la fuerza externa se le llama \textbf{solución de estado estable} o \textbf{respuesta forzada}. 
+		Por lo que se le conoce como \textbf{solución transitoria}. A \(x_p(t )\) que representa la oscilación estable con la misma frecuencia que la fuerza externa se le llama \textbf{solución de estado estable} o \textbf{respuesta forzada}. 
 	\end{block}
 \end{frame}
 

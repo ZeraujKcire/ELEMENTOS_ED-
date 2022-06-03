@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[9pt]{beamer}
 \input{preamble.tex}
 \begin{document}
 
@@ -19,16 +19,16 @@
 		\[
 			y(x) = y_c(x) + y_p(x).
 		\]
-		Es decir:
 	\end{block}
 \end{frame}
 
 \begin{frame}[t]
 	\begin{block}{}
+		Es decir:
 		\[
 			y(x) +c_1y_1(x) + \;\cdots\; + c_ny_n(x) + y_p(x).
 		\]
-		\(c_1, \;\ldots,\; c_n\) son ocnstantes arbitrarias, donde \(y_1,y_2, \;\ldots,\; y_n\) es un c.f.s de la E.D.L.H asociada. \\[2mm]
+		\(c_1, \;\ldots,\; c_n\) son constantes arbitrarias, donde \(y_1,y_2, \;\ldots,\; y_n\) es un c.f.s de la E.D.L.H asociada. \\[2mm]
 		Para determinar la solución particular de una E.D. No Homogénea estudiaremos dos métodos:
 		\begin{enumerate}
 			\item Método de coeficientes indeterminados.
@@ -54,7 +54,204 @@
 		\end{enumerate}
 	\end{example}
 \end{frame}
+
 \begin{frame}[t]
+	\begin{exampleblock}{}
+		\begin{enumerate}
+			\item \(y\,'' -2y' -3y = 8e^2\). \\[2mm]
+				Esta E.D. tiene solución del tipo exponencial \(y(x) = e^{mx}\), siempre y cuando \(m\) sea raíz de la ecuación característica
+				\[
+					\begin{array}{rcl}
+						m^2+2m-3 & = & 0 \\[2mm]
+						\iff (m+3) (m-1) & = & 0 \\[2mm]
+						\iff m_1=-3 && m_2=1.
+					\end{array}
+				\]
+				\(\therefore \hspace{5mm} y_1(x) = e^{-3x}\), \(y_2(x) = e^x\) es un c.f.s para la E.D.H asociada. Luego, \(y_c(x) = c_1e^{-3x} + c_2e^{x}\), \(c_1,c_2\) constantes arbitrarias. \\[2mm]
+				Ahora, determinamos una solución particular de la E.D.N.H.
+				\[
+					g(x) = 8e^{2x} \hspace{5mm} y \hspace{5mm} y = Ae^{2x}.
+				\]
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		determinremos \(A\) tal que \(y_p(x)\) sea solución de la E.D.N.H.
+		\[
+			y\,'_p(x) = 2Ae^{2x} \; \longrightarrow \; y\,'' _p(x) = 4Ae^{2x}.
+		\]
+		Sustituyendo \(y_p\), \(y_p\,'\), \(y_p\,''\) en la E.D.N.H
+		\[
+			\begin{array}{rcl}
+				4Ae^{2x} + 2(2Ae^{2x}) -3(Ae^{2x}) & = & 8e^{2x} \\[2mm]
+				4Ae^{2x} + 4Ae^{2x} - 3Ae^{2x} & = & 8e^{2x} \\[2mm]
+				A & = & 8/5. \\[2mm]
+				\therefore \hspace{5mm} y_p(x) & = & \frac 85e^{2x} .
+			\end{array}
+		\]
+		Es una solución particular de la E.D.N.H. Por consiguiente la solución general es:
+		\begin{center}
+			\color{red} \underline{\color{black} \(y(x) = c_1e^{-3x} + c_2e^{x} + \frac 85e^{2x}\)}\color{black}, \(c_1,c_2\) constantes arbitrarias.
+		\end{center}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+		\item \(y\,'' -2y\,' -3y = (x-1) ^2\). \\[2mm]
+			Del inciso anterior, se tiene que la solución completamentaria es:
+				\[
+					y_1(x) = c_1e^{-3x} + c_2e^x.
+				\]
+				Ahora, determinemos una solución particular de la E.D.N.H.
+				\begin{minipage}{0.5\linewidth}
+					\[
+						\begin{array}{rcl}
+							g(x) & = & (x-1) ^2 \\[2mm]
+							& = & x^2-2x+1
+						\end{array}
+					\]
+				\end{minipage}
+				\begin{minipage}{0.4\linewidth}
+					\[
+						\begin{array}{rcl}
+							y_p(x) & = & Ax^2+Bx+C \\[2mm]
+							y_p\,'(x) & = & 2Ax+B \\[2mm]
+							y_p\,''(x) & = & 2A.
+						\end{array}
+					\]
+				\end{minipage}\\
+				Sustituimos \(y_p\), \(y_p'\), \(y_p''\) en la E.D.
+				\[
+					\begin{array}{rcl}
+						2A+2(2Ax+B) -3(Ax^2+Bx+C) & = & x^2-2x+1 \\[2mm]
+						-3Ax^2+(4A-3B) x+(2A+2B-3C) & = & x^2-2x+1.
+					\end{array}
+				\]
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\begin{minipage}{0.5\linewidth}
+			\[
+				\begin{array}{rcl}
+					-3A & = & 1 \\[2mm]
+					4A -3B & = & -2 \\[2mm]
+					2A+2B-3C & = & 1
+				\end{array}
+			\]
+		\end{minipage}
+		\begin{minipage}{0.4\linewidth}
+			\[
+				\begin{array}{rcl}
+					A & = & -1/3 \\[2mm]
+					B & = & 4/9 \\[2mm]
+					C & = & -11/27.
+				\end{array}
+			\]
+		\end{minipage}
+		\[
+			\therefore \hspace{5mm} y_p(x) = - \dfrac{1}{3} x^2+ \dfrac{2}{9} x- \dfrac{11}{27}.
+		\]
+		Por lo tanto, la solución general de la E.D.N.H. es:
+		\[
+			y(x) = c_1e^{-3x} + c_2e^x - \dfrac{1}{3} x^2+ \dfrac{2}{9} x- \dfrac{11}{27}.
+		\]
+		\(c_1,c_2\) constantes arbitrarias.
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\begin{enumerate}
+			\setcounter{enumi}{2}
+		\item \(y\,'' +2y\,' -3y = 7 \cos 3x\). \\[2mm]
+			Tenemos que:
+				\[
+					y_c(x) = c_1e^{-3x} + c_2e^x.
+				\]
+				\begin{minipage}{0.3\linewidth}
+					\(g(x) = 7 \cos 3x\).
+				\end{minipage}\hspace{5mm}
+				\begin{minipage}{0.6\linewidth}
+					\[
+						\begin{array}{rcl}
+							y_p(x) & = & A \cos 3x + B \sin 3x \\[2mm]
+							y_p\,' (x) & = & -3A \sin 3x +3B \cos 3x \\[2mm]
+							y_p\,'' (x) & = & -9A \cos 3x - 9B \sin 3x
+						\end{array}
+					\]
+				\end{minipage}
+				Sustituimos \(y_p\), \(y_p\,'\), \(y_p\,''\) en la E.D.
+				\[
+					\begin{array}{rcl}
+						(-9A \cos 3x-9B \sin 3x) && \\[2mm]
+						+2(-3A \sin 3x+3B \cos 3x)&& \\[2mm]
+						-3(A \cos 3x + B \sin 3x) & = & 7 \cos 3x. \\[2mm]
+					\end{array}
+				\]
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\[
+			\begin{array}{rcl}
+				-9A \cos 3x-9B \sin 3x && \\[2mm]
+				-6A \sin 3x+6B \cos 3x&& \\[2mm]
+				-3A \cos 3x + 3B \sin 3x & = & 7 \cos 3x \\[2mm]
+				-12A \cos 3x-12B \sin 3x-6A \sin 3x+6B \cos 3x & = & 7 \cos 3x.
+			\end{array}
+		\]
+		\[
+			\cos 3x (6B-12A) + \sin 3x (-6A-12B) = 7 \cos 3x + 0 \sin 3x.
+		\]
+		\begin{minipage}{0.4\linewidth}
+			\[
+				\begin{array}{rcl}
+					-12A + 6B & = & 7 \\[2mm]
+					-6A -12B & = & 0
+				\end{array}
+			\]
+		\end{minipage}
+		\begin{minipage}{0.5\linewidth}
+			\[
+				\begin{array}{rcl}
+					\cancel{-12A} + 6B & = & 7 \\[2mm]
+					\cancel{-12A} + 24B & = & 0 \\ \hline
+					30B & = & 7 \\[2mm]
+					B & = & 7/30.
+				\end{array}
+			\]
+		\end{minipage}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\[
+			\begin{array}{rcl}
+				-12A +6(7/30) & = & 7 \\[2mm]
+				-12A + 7/5 & = & 7 \\[2mm]
+				-12A & = & 26/5 \\[2mm]
+				A & = & -7/15.
+			\end{array}
+		\]
+		\[
+			\therefore \hspace{5mm} y_p(x) = - \dfrac{7}{15} \cos 3x+ \dfrac{7}{30} \sin 3x.
+		\]
+		Por lo tanto, la solución general de la E.D.N.H. es:
+		\begin{center}
+			\color{red} \underline{\color{black} \(y(x) = c_1 e^{-3x} + c_2 - \dfrac{7}{15} \cos 3x+ \dfrac{7}{3} \sin 3x\)}
+		\end{center}
+	\end{exampleblock}
 \end{frame}
 
 \begin{frame}[t]
@@ -62,13 +259,68 @@
 		El método de Coeficientes Indeterminados falla cuando \(g(x)\) es solución de la Ecuación Diferencial Homogéna asociada.
 	\end{block}
 	\begin{example}
-		Suponga que \(g(x) =e^{-3x}\) en el ejemplo anterior, luego, encuentre una solución particular de la E.D.N.H.
+		Suponga que \(g(x) =e^{-3x}\) en el ejemplo anterior, luego, encuentre una solución particular de la E.D.N.H. \(y'' +2y' -3y=e^{-3x}\). \\[2mm]
+		\textbf{Solución.} Observemos que la solución general de la E.D.N.H. asociada a la E.D. es: \vspace{-5mm}
 		\[
-			y'' +2y' -3y=e^{-3x}.
+			y_c(x) = c_1e^{-3x} +c_2e^x.
+		\]
+		\[
+			g(x) = e^{-3x} \; \longrightarrow \; \begin{array}{rcl}
+				y_p(x) & = & Ae^{-3x} \\[2mm]
+				y_p\,' (x) & = & -3Ae^{-3x} \\[2mm]
+				y_p\,'' (x) & = & 9Ae^{-3x}
+			\end{array}
 		\]
 	\end{example}
 \end{frame}
+
 \begin{frame}[t]
+	\begin{exampleblock}{}
+		Sustituyendo:
+		\[
+			\begin{array}{rcl}
+				9Ae^{-3x} + 2(-3Ae^{-3x}) -3(Ae^{-3x}) & = & e^{-3x} \\[2mm]
+				\cancel{9Ae^{-3x}} - \cancel{9Ae^{-3x}} & = & e^{-3x} \\[2mm]
+				0 & = & e^{-3x}!!!
+			\end{array}
+		\]
+		\[
+			\begin{array}{rcl}
+				y_p(x) & = & Axe^{-3x} \\[2mm]
+				y_p\,' (x) & = & 9Axe^{-3x} - 3Ae^{-3x} - 3Ae^{-3x} \\[2mm]
+				y_p\,'' (x) & = & 9Axe^{-3x} - 6Ae^{-3x} .
+			\end{array}
+		\]
+		Sust. \(y_p\), \(y_p'\), \(y_p''\). \vspace{-5mm}
+		\[
+			\begin{array}{rcl}
+				(9Axe^{-3x} - 6Ae^{-3x}) && \\
+				+2(-3Axe^{-3x} +Ae^{-3x}) && \\
+				-3(Axe^{-3x}) & = & e^{-3x} .
+			\end{array}
+		\]
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\[
+			\begin{array}{rcl}
+				\cancel{9Axe^{-3x}} - 6Ae^{-3x} - \cancel{6Axe^{-3x}} +2Ae^{-3x} - 3A \cancel{xe^{-3x}} & = & e^{-3x} \\[2mm]
+				\iff -4Ae^{-3x} & = & e^{-3x} \\[2mm]
+				\iff -4A & = & 1 \\[2mm]
+				\iff A & = & -1/4.
+			\end{array}
+		\]
+		\[
+			y_p(x) = - \dfrac{1}{4} e^{-3x}.
+		\]
+		Luego, la solución general para ésta E.D. es:
+		\[
+			y(x) = c_1e^{-3x} + c_2e^x- \dfrac{1}{4} xe^{-3x}.
+		\]
+		\(c_1,c_2\) constantes arbitrarias.
+	\end{exampleblock}
 \end{frame}
 
 \begin{frame}[t]
@@ -77,27 +329,229 @@
 		\[
 			y(0) = 2 \;,\; y' (0) =5.
 		\]
+		\textbf{Solución.}
+		\begin{enumerate}
+			\item La E.D. Homogénea asociada es:
+				\[
+					y\,'' +4y\,' +4y =0.
+				\]
+				La ecuación característica es:
+				\[
+					\begin{array}{rcl}
+						m^2+4m+4 & = & 0 \\[2mm]
+						(m+2) ^2 & = & 0 \\[2mm]
+						m_1 = -2 & = & m_2.
+					\end{array}
+				\]
+		\end{enumerate}
 	\end{alertblock}
 \end{frame}
 
 \begin{frame}[t]
+	\begin{alertblock}{}
+		Luego:
+		\begin{center}
+			\color{red} \underline{\color{black} \(y_c(x) = c_1e^{-2x} + c_2e^{-2x}\)}
+		\end{center}
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+			\item Obtener una solución particular de la E.D.N.H.
+				\[
+					\begin{array}{rcl}
+						g(x) = (3+x) e^{-2x} & \; \longrightarrow\; & \begin{array}{rcl}
+							y_p(x) & = & (Ax+B) e^{-2x} \hspace{5mm} \color{red} \ballotx \color{black} \\[2mm]
+							y_p(x) & = & x(Ax+B) e^{-2x} \hspace{5mm} \color{red} \ballotx \color{black} \\[2mm]
+							& = & Ax^2e^{-2x} + \underbrace{Bxe^{-2x}} \hspace{5mm} \color{red} \ballotx \color{black}
+						\end{array} \\[2mm]
+						& \; \longrightarrow\; & y_p(x) = x^{2} (Ax+B) e^{-2x} \hspace{5mm} \color{green!60!black} \ballotcheck \color{black}
+					\end{array} \vspace{-3mm}
+				\]
+				Derivamos
+				\[
+					\small
+					\begin{array}{rcl}
+						y_p(x) & = & Ax^3e^{-2x} +Bx^2e^{-2x} = e^{-2x} (Ax^3+Bx^2) \\[2mm]
+						y\,'_p(x) & = & 3Ax^2e^{-2x} -2Ax^3e^{-2x} +2Bxe^{-2x} -2Bx^2e^{-2x} \\[2mm]
+						& = & e^{-2x} \big[-2Ax^3+(3A-2B) x^2+2Bx\big] . \\[2mm]
+						y\,'' _p(x) & = & 6Axe^{-2x} -6Ax^2e^{-2x} -6Ax^2 + 4Ax^3e^{-2x} +2Be^{-2x} \\[2mm]
+						&& -4Bxe^{-2x} -4Bxe^{-2x} + 4Bx^2e^{-2x}.
+					\end{array}
+				\]
+		\end{enumerate}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{alertblock}{}
+		\[
+			\small
+			\begin{array}{rcl}
+				y_p'' & = & 4Ax^3e^{-2x} -12Ax^2e^{-2x} + 4Bx^2e^{-2x} +6Axe^{-2x} -8Bxe^{-2x} +2Be^{-2x} \\[2mm]
+				& = & e^{-2x} \big[4Ax^3+(-12A+4B) x^2+(6A-8B) x+2B\big]
+			\end{array}
+		\]
+		Sustituimos \(y_p\), \(y_p\,'\), \(y_p\,''\) en la E.D.N.H. \(y\,'' +4y\,' +4y=0\).
+		\[
+			\begin{array}{rcl}
+				\big[4Ax^3+(-12A+4B) x^2+(6A-8B) x+2B\big] e^{-2x} && \\[2mm]
+				+4\big[-2Ax^3+(3A-2B) x^2+2Bx\big] e^{-2x} && \\[2mm]
+				+4(Ax^3+Bx^2) e^{-2x} & = & (3+x) e^{-2x} \\[2mm]
+				\big[(0) x^3+(0) x^2 + (6A+0B) x +2B\big] e^{-2x} & = & (x+3) e^{-2x} \\[2mm]
+				6A = 1 &,& A = 1/6\\[2mm]
+				2B = 3 &,& B = 3/2.
+			\end{array}
+		\]
+		\begin{center}
+			\(\therefore \hspace{5mm}\)\color{red} \underline{\color{black}\( y_p(x) = x^2 \big(1/6x+3/2\big) e^{-2x}\)}
+		\end{center}
+		Por lo tanto, la solución general de la E.D.N.H. es:
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{alertblock}{}
+		\small
+		\[
+			y(x) = c_1e^{-2x} + c_2xe^{-2x} + x^2(1/6x+3/2) e^{-2x}.
+		\]
+		Determinemos \(c_1\) y \(c_2\) tales que \(y(0) = 2\), \(y\,'(0) = 5\).
+		\[
+			\begin{array}{rcl}
+				y(x) & = & c_1e^{-2x} + c_2xe^{-2x} + \bigg(\dfrac{1}{6} x^3 + \dfrac{3}{2} x^2\bigg) e^{-2x} \\[2mm]
+				y\,'(x) & = & -2c_1e^{-2x} +c_2e^{-2x} -2c_2xe^{-2x} + (1/2x^2+3x) e^{-2x} \\[2mm] 
+				&& - 2 \big(1/6x^3+3/2x^2\big) e^{-2x}
+			\end{array}
+		\]
+		Luego
+		\[
+			\begin{array}{rcl}
+				y(0) & = & c_1e^{-2(0)} + \cancelto{0}{c_2(0) e^{-2(0)}} + \cancelto{0}{\big(1/6(0) ^3+3/2(0) ^2\big)} e^{-2(0)} = 2\\[2mm]
+				&& \therefore \hspace{5mm} c_1 = 2. \\[2mm]
+				y\,'(0) & = & -2c_1e^{-2(0)} +c_2e^{-2(0)} -2c_2(0) e^{-2(0)} +(1/2(0) ^2+3(0)) e^{-2(0)} \\[2mm]
+				&& -2(1/6(0) ^3+3/2 (0) ^2) e^{-2(0)} = 5 \\[2mm]
+				\iff y\,'(0) & = & -2c_1+c_2 = 5 \\[2mm]
+				\iff c_2 & = & 5+2c_1 = 5 +2(2) = 9 \\[2mm]
+				&& \therefore \hspace{5mm} c_2 = 9.
+			\end{array}
+		\]
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{alertblock}{}
+		\(\therefore \hspace{5mm}\) La solución del P.V.I. es:
+		\begin{center}
+			\color{red} \underline{\color{black} \(y(x) = 2e^{-2x} +9xe^{-2x} +x^2(1/6x+3/2) e^{-2x}\)}
+		\end{center}
+	\end{alertblock}
 	\begin{block}{}
 		Sean \(y_1,y_2, \;\ldots,\; y_k\) soluciones particulares de una E.D.N.H con \(g_1, g_2, \;\ldots,\; g_k\), respectivamente. Esto es, \(y_i\) representa la solución particular de la E.D. \(a_n(x) y^(n) + a_{n-1} (x) y^{(n-1)} + \;\cdots\; + a_1(x) y' +a_0y = g_i(x)\), entonces
 		\[
-			\;\implies\; y(x) = y_1+ y_2+ \;\cdots\; +y_k(x),
+			\; \longrightarrow \; y(x) = y_1+ y_2+ \;\cdots\; +y_k(x),
 		\]
 		es solución paicular de la E.D.N.H.
 		\[
 			a_n(x) y^{(n)} + a_{n-1} y^{(n-1)} + \;\cdots\; + a_1(x) y' +a_0y=g_1(x) + \;\cdots\; g_k(x).
 		\]
 	\end{block}
+\end{frame}
+
+\begin{frame}[t]
 	\begin{example}
 		Obtener la solución general de la E.D.N.H siguiente:
 		\[
 			y''' -4y' = 2x+5-e^{-2x}.
 		\]
+	\textbf{Solución.} La E.D. Homogénea asociada es:
+		\[
+			y\,''' + 0y\,'' - 4y\,' + 0y =0.
+		\]
+		La ecuación característica es:
+		\[
+			\begin{array}{rcl}
+				m^3-4m & = & 0 \\[2mm]
+				m(m^2-4) & = & 0 \\[2mm]
+				\therefore \hspace{5mm} m_1=0 \;,\; m_2=2 &,& m_3  = -2.
+			\end{array}
+		\]
+		\[
+			\begin{array}{rcl}
+				y_c(x) & = & c_1e^{0} + c_2e^{2x} + c_3e^{-2x} \\[2mm]
+				& = & c_1+c_2e^{2x} +c_3e^{-2x} .
+			\end{array}
+		\]
 	\end{example}
 \end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		Para obtener \(y_{p_1} (x)\):
+		\[
+			\begin{array}{rcl}
+				y_{p_1} (x) & = & Ax+B \hspace{5mm} \color{red} \ballotx \color{black} \\[2mm]
+				y_{p_1} (x) & = & Ax^2+Bx \hspace{5mm}\color{green!60!black} \ballotcheck \color{black}\\[2mm]
+				y_{p_1}' (x) & = & 2Ax+B \\[2mm]
+				y_{p_1} '' (x) & = & 2A \\[2mm]
+				y_{p_1} ''' (x) & = & 0.
+			\end{array}
+		\]
+		Sistutyendo en la E.D.
+		\[
+			\begin{array}{rcl}
+				(0) -4(2Ax+B) & = & 2x+5 \\[2mm]
+				-8Ax-4B & = & 2x+5 \\[2mm]
+				-8A = 2 && -4B = 5 \\[2mm]
+				A = -2/8=-1/4 && B = -5/4.
+			\end{array}
+		\]
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		Para obtener \(y_{p_2} (x)\)
+		\[
+			\begin{array}{rcl}
+				y_{p_2} (x) & = & Ae^{-2x} \hspace{5mm} \color{red} \ballotx \color{black} \\[2mm]
+				y_{p_2} (x) & = & Axe^{-2x} \hspace{5mm} \color{green!60!black} \ballotcheck \color{black} \\[2mm]
+				y_{p_2} '(x) & = & -2Axe^{-2x} + Ae^{-2x} \\[2mm]
+				y_{p_2} '' (x) & = & 4Axe^{-2x} -2Ae^{-2x} -2Ae^{-2x} = 4Axe^{-2x} -4Ae^{-2x} \\[2mm]
+				y_{p_2} ''' (x) & = & -8Axe^{-2x} +4Ae^{-2x} +8Ae^{-2x} = -8Axe^{-2x} +12Ae^{-2x}.
+			\end{array}
+		\]
+		Sustituyendo
+		\[
+			\begin{array}{rcl}
+				-8Axe^{-2x} +12AAe^{-2x} -4 \big(-2Axe^{-2x} +Ae^{-2x}\big) & = & -e^{-2x} \\[2mm]
+				-8Axe^{-2x} +12Ae^{-2x} +8Axe^{-2x} -4Ae^{-2x} & = & -e^{-2x} \\[2mm]
+				8Ae^{-2x} & = & -e^{-2x} \\[2mm]
+				8A & = & -1 \\[2mm]
+				A & = & -1/8.
+			\end{array}
+		\]
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\[
+			\therefore \hspace{5mm} y_{p_2} = -1/8xe^{-2x}.
+		\]
+		\[
+			\begin{array}{rcl}
+				y_p(x) & = & y_{p_1} (x) + y_{p_2} (x) \\[2mm]
+				& = & x(-1/4x-5/4) + (-1/8xe^{-2x}) \\[2mm]
+				y_p(x) & = & -1/4x^2-5/4x-1/8xe^{-2x} .
+			\end{array}
+		\]
+		\(\therefore\) \hspace{5mm} La solución general de la E.D.N.H. es:
+		\begin{center}
+			\(y(x) =c_1+c_2e^{2x} + c_3e^{-2x} -1/4x^2\) \color{red} \underline{\color{black} \(-5/4x-1/8xe^{-2x}\)}
+		\end{center}
+		\(c_1,c_2,c_3\) constantes arbitrarias.
+	\end{exampleblock}
+\end{frame}
+
 % )))
 
 \section{Método de Variación de Parámetros.} % (((
@@ -162,18 +616,178 @@
 		\]
 	\end{block}
 	\begin{example}
-		Considere la E.D. \(y'' +y = \tan x\). Encuentre la solución general de la E.D.
+		Considere la E.D. \(y'' +y = \tan x\). Encuentre la solución general de la E.D. \\[2mm]
+		\textbf{Solución.} La E.D. homogénea asociada es:
+		\[
+			y\,'' +y = 0.
+		\]
+		Luego, usamos la ecuación característica para resolverlo \vspace{-3mm}
+		\[
+			\begin{array}{c}
+				m^2+1 = 0 \iff m^2 = -1 \iff m = \pm \sqrt{-1} = \pm i. \\[2mm]
+				\alpha = Re(m_1) = 0 \hspace{2mm} \beta = Im(m_1) = 1.
+			\end{array}
+		\]
 	\end{example}
 \end{frame}
+
 \begin{frame}[t]
+	\begin{exampleblock}{}
+		Así pues, se tienen dos soluciones reales L.I.
+		\[
+			y_1(x) = \cos x \hspace{5mm} y_2(x) = \sin x.
+		\]
+		Por lo tanto, la solución complementaria es:
+		\begin{center}
+			\color{red} \underline{\color{black} \(y_c(x) = c_1 \cos x+ c_2 \sin x\)}
+		\end{center}
+		Ahora, determinemos la solución particular \(y_p(x)\) para la E.D.N.H. usando variación de parámetros.
+		\[
+			y_p(x) = \mu _1(x) \color{red} \underbrace{\color{black} \cos x} _{y_1(x)} \color{black} + \mu _2(x) \color{red} \underbrace{\color{black} \sin x} _{y_2(x)}.
+		\]
+		\color{black} donde:
+		\[
+			\mu _1(x) = \dis\int \dfrac{-y_2(x) G(x)}{W[y_1,y_2] (x)} dx \hspace{1cm} \mu _2(x) = \dis\int \dfrac{y_1(x) G(x)}{W[y_1,y_2] (x)} dx.
+		\]
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\vspace{-4mm}
+	\begin{exampleblock}{}
+		\[
+			W[y_1,y_2] (x) = \begin{vmatrix}
+				\cos x & \sin x \\
+				- \sin x & \cos x
+			\end{vmatrix} = \cos ^2x + \sin ^2x = 1 \ne 0.
+		\]
+		\[
+			\begin{array}{rcl}
+				\mu _1(x) & = & \dis\int \dfrac{-( \sin x) \tan x}{1} dx = \dis\int \dfrac{- \sin ^2x}{\cos x} dx = \dis\int \dfrac{1- \cos ^2x}{\cos x} dx \\[2mm]
+				& = & - \dis\int \dfrac{1}{\cos x} dx + \dis\int \cos x dx = - \dis\int \sec x dx + \dis\int \cos x dx \\[2mm]
+				& = & - \ln \big| \sec x+ \tan x \big| + \sin x \cancelto{0}{+C}. \\[2mm]
+				\mu _2(x) & = & \dis\int \dfrac{\cos x \tan x}{1} dx = \dis\int \cos x \dfrac{\sin x}{\cos x} dx = \dis\int \sin xdx = \cos x.
+			\end{array}
+		\]
+		Por lo tanto, \(y_p(x) = \big(- \ln  \big| \sec x+ \tan x \big| + \sin x\big) - \cos x \sin x\).
+		\begin{center}
+			\(\iff\) \color{red} \underline{\color{black} \(y_p(x) = - \cos x \ln \big| \sec x+ \tan x \big|\)}
+		\end{center}
+		Por consiguiente, la solución general de la E.D. es:
+		\[
+			y(x) = c_1 \cos x + c_2 \sin x- \cos x \ln \big| \sec x+ \tan x \big| .
+		\]
+		\(c_1,c_2,c_3\) constantes arbitrarias.
+	\end{exampleblock}
 \end{frame}
 
 \begin{frame}[t]
 	\begin{alertblock}{Ejercicio.}
-		Resuelve el P.V.I. \(y'' -4y' +4y=(12x^2-6x) e^{2x}\), con \(y(0) =1\), \(y' (0) =1\). Use el método de variación de parámetros para encontrar una solución particular de la E.D.N.H.
+		Resuelve el P.V.I. \(y'' -4y' +4y=(12x^2-6x) e^{2x}\), con \(y(0) =1\), \(y' (0) =1\). Use el método de variación de parámetros para encontrar una solución particular de la E.D.N.H. \\[2mm]
+		\textbf{Solución.} La E.D. homogénea asociada es:
+		\[
+			y\,'' -4y\,' +4y=0.
+		\]
+		Resolvendo la ecuación característica:
+		\[
+			m^2-4m+4 = 0.
+		\]
+		Por fórmula general:
+		\[
+			m_{1,2} = \dfrac{-(-4) \pm \sqrt{(-4) ^2-4(1) (4)}}{2(1)} = \dfrac{4 \pm 0}{2} = \dfrac{4}{2} = 2.
+		\]
+		Así pues, se tienen dos soluciones reales L.I., y son:
 	\end{alertblock}
 \end{frame}
+
 \begin{frame}[t]
+	\begin{alertblock}{}
+		\[
+			y_1(x) = e^{2x} \hspace{5mm} y_2(x) = xe^{2x}.
+		\]
+		Por tanto, la solución complementaria es:
+		\[
+			y_c(x) = c_1e^{2x} + c_2xe^{2x}.
+		\]
+		Ahora, determinemos la solución particular \(y_p(x)\) para la E.D.N.H., donde
+		\[
+			\mu _1(x) = \dis\int \dfrac{-y_2(x) G(x)}{W[y_1,y_2] (x)} dx \hspace{5mm} \mu _2(x) = \dis\int \dfrac{y_1(x) G(x)}{W[y_1,y_2] (x)} dx.
+		\]
+		\[
+			\begin{array}{rcl}
+				W[y_1,y_2] (x) & = & \begin{vmatrix}
+					e^{2x} & xe^{2x} \\
+					2e^{2x} & 2xe^{{2x}} + e^{2x}
+				\end{vmatrix}\\[2mm]
+				& = & 2xe^{4x} +e^{4x} -2xe^{4x} = e^{4x} \ne 0.
+			\end{array}
+		\]
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{alertblock}{}
+		\[
+			\begin{array}{rcl}
+				\mu _1(x) & = & \dis\int \dfrac{-xe^{2x} (12x^2-6x) e^{2x} dx}{e^{4x}} = \dis\int \dfrac{-x \cancel{e^{4x}} (12x^2-6x) dx}{\cancel{e^{4x}}} \\[2mm]
+				& = & \dis\int (-12x^3+6x^2) dx = -12 \bigg(\dfrac{x^4}{4}\bigg) + 6 \bigg(\dfrac{x^3}{3}\bigg) = -3x^4+2x^3. \\[2mm]
+				\mu _2(x) & = & \dis\int \dfrac{e^{2x} \big(12x^2-6x\big) e^{2x} dx}{e^{4x}} = \dis\int \dfrac{\cancel{e^{4x}} \big(12x^2 -6x\big) dx}{\cancel{e^{4x}}} \\[2mm]
+				& = & \dis\int (12x^2-6x) dx = 12 \bigg(\dfrac{x^3}{3}\bigg) - 6 \bigg(\dfrac{x^2}{2}\bigg) = 4x^3-3x^2.
+			\end{array}
+		\]
+		Por lo tanto, \(y_p(x) = (-3x^4+2x^3) (e^{2x}) + (4x^3-3x^2) (xe^{2x})\),
+		\[
+			\begin{array}{rcl}
+				y_p(x) & = & -3x^4e^{2x} +2x^3e^{2x} + 4x^4e^{2x} -3x^2e^{2x} \\[2mm]
+				\therefore \hspace{5mm} y_p(x) & = & x^4e^{2x} -x^3e^{2x} .
+			\end{array}
+		\]
+		Por consiguiente la solución general de la E.D. es:
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{alertblock}{}
+		\begin{center}
+			\color{red} \underline{\color{black} \(y(x) = c_1e^{2x} +c_2xe^{2x} +x^4e^{2x} -x^3e^{2x}\)}
+		\end{center}
+		Para determinar \(c_1\) y \(c_2\),
+		\[
+			\begin{array}{rcl}
+				y\,'(x) & = & \hphantom{+}2c_1e^{2x} +c_22xe^{2x} +c_2e^{2x} +2x^4e^{2x}\\[2mm] 
+				&& + 4x^3e^{2x} -2x^3e^{2x} -3x^2e^{2x}.
+			\end{array}
+		\]
+		Aplicando la C.I. \(y(0) = 1\).
+		\[
+			\begin{array}{rcl}
+				y(0) = \cancelto{c_1}{e^{2(0)}} + \cancelto{0}{c_1(0) e^{2(0)}} + \cancelto{0}{(0) ^4 e^{2(0)}} - \cancelto{0}{(0) ^3e^{2(0)}}  & = & 1 \\[2mm]
+				c_1 & = & 1.
+			\end{array}
+		\]
+		Aplicando la C.I. \(y\,'(0) = 1\), y sustituyendo \(c_1=1\),
+		\[
+			\begin{array}{rcl}
+				y\,'(0) & = & \cancelto{2}{2e^{2(0)}} + c_2 \cancelto{0}{2(0) e^{2(0)}} + \cancelto{c_2}{c_2e^{2(0)}} + \cancelto{0}{2(0)^4e^{2(0)}} \\[2mm]
+				&& + \cancelto{0}{4(0) ^3e^{2(0)}} - \cancelto{0}{2(0) ^3e^{2(0)}} - \cancelto{0}{3(0) ^2e^{2(0)}} = 1.
+			\end{array}
+		\]
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{alertblock}{}
+		\[
+			\begin{array}{rcl}
+				2+c_2 & = & 1 \\[2mm]
+				c_2 & = & -1.
+			\end{array}
+		\]
+		\(\therefore\) \hspace{5mm} La solución del P.V.I. es:
+		\begin{center}
+			\color{red} \underline{\color{black} \(y(x) = e^{2x} -xe^{2x} +x^4e^{2x} -x^3e^{2x}\)}
+		\end{center}
+	\end{alertblock}
 \end{frame}
 
 \begin{frame}[t]
@@ -182,7 +796,89 @@
 		\[
 			y'' -2y' +y = 4x^2-3+x^{-1} e^x.
 		\]
+		\textbf{Solución.} La homogénea asociada es:
+		\[
+			y\,'' -2y\,' +y =0.
+		\]
+		La ecuación característica es:
+		\[
+			\begin{array}{rcl}
+				m^2-2m+1=0 & \iff & (m-1) ^2 = 0 \\[2mm]
+				& \iff & m_1 = 1 = m_2. \\[2mm]
+				y_1(x) = e^x &,& y_2(x) = xe^x.
+			\end{array}
+		\]
+		\[
+			\;\implies\; y_c(x) = c_1e^x+c_2xe^x.
+		\]
 	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		Ahora,
+		\[
+			y_{p_2} (x) = \mu _1e^x+ \mu _2xe^x.
+		\]
+		\[
+			W[y_1,y_2] (x) = \begin{vmatrix}
+				e^x & xe^x \\
+				e^x & xe^x+e^x
+			\end{vmatrix} = xe^{2x} +e^{2x} -xe^{2x} = e^{2x} \ne 0.
+		\]
+		\[
+			\begin{array}{rcl}
+				\mu _1(x) & = & \dis\int \dfrac{-y_2(x) G(x) dx}{W[y_1,y_2] (x)} = \dis\int \dfrac{(-xe^{x}) (x^{-1} e^x) dx}{e^{2x}} = \dis\int \dfrac{-e^{2x}}{2x} dx \\[2mm]
+				& = & - \dis\int 1dx = -x.\\[5mm]
+				\mu _2(x) & = & \dis\int \dfrac{y_1(x) G(x)}{W[y_1,y_2] (x)} dx = \dis\int \dfrac{e^x(x^{-1} e^{x}) dx}{e^{2x}} = \dis\int \dfrac{x^{-1} e^{2x}}{e^{2x}} dx \\[2mm]
+				& = & \dis\int x^{-1} dx = \dis\int \dfrac{1}{x} dx = \ln |x|.
+			\end{array}
+		\]
+		Ahora: 
+		\[
+			g_1(x) = 4x^2-3 \longrightarrow y_p(x) = Ax^2+Bx+C.
+		\]
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\[
+			\begin{array}{rcl}
+				y\,'_p(x) & = & 2Ax+B \\[2mm]
+				y\,'' _p(x) & = & 2A
+			\end{array}
+		\]
+		Sustituyendo:
+		\[
+			\begin{array}{rcl}
+				2A-2(2Ax+B) +Ax^2+Bx+C & = & 4x^2-3 \\[2mm]
+				2A-4Ax-2B+Ax^2+Bx+C & = & 4x^2-3 \\[2mm]
+				Ax^2+(-4A+B) x+(2A-2B+C) & = & 4x^2+0x-3.
+			\end{array}
+		\]
+		\(\;\implies\;  A=4\), \(-4A+B = 0\), \(\;\implies\; -4(4) +B=0 \;\implies\; B= \;\implies\; B=16\). \\[2mm]
+		\[
+			\begin{array}{rrrcl}
+				2A-2B+C=-3 & \;\implies\; & 2(4) -2(16) +C & = & -3 \\[2mm]
+				&& 8-32+C & = & -3 \\[2mm]
+				&& C & = & 21.
+			\end{array}
+		\]
+		Como \(y_{p_1}(x) = 4x^2+16x+21\), y \(y_p(x) = y_{p_1} (x) + y_{p_2} (x)\).
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\[
+				y_p(x) = 4x^2+16x+21+ (-xe^{x} +xe^x \ln |x|)
+		\]
+		Por consiguiente, la solución general de la E.D. es:
+		\begin{center}
+			\color{red} \underline{\color{black} \(y(x) = c_1e^x+c_2xe^x+4x^2+16x+21 -xe^x+xe^x \ln |x|\)}
+		\end{center}
+	\end{exampleblock}
 \end{frame}
 % )))
 
@@ -227,8 +923,105 @@
 
 \begin{frame}[t]
 	\begin{example}
-		Resueve por variación de parámetros la siguiente E.D.N.H \(y''' +4y' = \sec 2x\).
+		Resueve por variación de parámetros la siguiente E.D.N.H \(y''' +4y' = \sec 2x\). \\[2mm]
+		\textbf{Solución.} La ecuación diferencial homogénea es:
+		\[
+			y\,''' +4y\,' = 0.
+		\]
+		Usamos la ecuación característica correspondiente:
+		\[
+			\begin{array}{rcl}
+				m^3+4m = 0 \iff m(m^2+4) =0 & \iff & m_1 = 0 \mbox{ o } m^2+4=0\\[2mm]
+				&& m^2 = -4 \\[2mm]
+				&& m_{2,3} = \pm 2i.
+			\end{array}
+		\]
+		\(\alpha =0\), \(\beta =2\). Luego, se tienen tres soluciones L.I.
+		\[
+			y_1(x) = e^{0x} = 1 \hspace{5mm} y_2(x) = \cos 2x \hspace{5mm} y_3(x) = \sin 2x.
+		\]
 	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		Por consiguiente, la solución complementaria es:
+		\[
+			y_c(x) = c_1+c_2 \cos 2x+ c_3 \sin 2x \hspace{5mm} c_1,c_2,c_3\mbox{ constantes arbitrarias}.
+		\]
+		Ahora, biem, el método de variación de parámetros propone:
+		\[
+			y_p(x) = \mu _1(x) + \mu _2(x) \cos 2x + \mu _3(x) \sin 2x.
+		\]
+		\(\mu _i\) satisfacen el siguiente sistema:
+		\[
+			\begin{array}{rcl}
+				\mu _1\,' + \cos 2x \mu _2\,' + \sin 2x \mu _3\,' & = & 0 \\[2mm]
+				0 \mu _1' -2 \sin 2x \mu _2\,' + 2 \cos 2x \mu _3\,' & = & 0 \\[2mm]
+				0 \mu _1\,' -4 \cos 2x \mu _2' -4 \sin 2x \mu _3' & = & 0.
+			\end{array}
+		\]
+		Usamos la regla de Cramer:
+		\[
+			W = \begin{vmatrix}
+				1 & \cos 2x & \sin 2x \\
+				0 & -2 \sin 2x & 2 \cos 2x \\
+				0 & -4 \cos 2x & -4 \sin 2x
+			\end{vmatrix} = 1(-1) ^2 \big[8 \sin ^22x+8 \cos ^22x\big] = 8.
+		\]
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\[
+			\begin{array}{rcl}
+				\mu _1\,' = \dfrac{W_1}{W} & = & \dfrac{1}{8} \begin{vmatrix}
+					0 & \cos 2x & & \sin 2x \\
+					0 & -2 \sin 2x & 2 \cos 2x \\
+					\sec 2x & -4 \cos 2x & -4 \sin 2x
+				\end{vmatrix}\\[2mm]
+				& = & \dfrac{1}{8} \sec 2x (-1) ^{3+1} \begin{vmatrix}
+					\cos 2x & \sin 2x \\
+					-2 \sin 2x & 2 \cos 2x
+				\end{vmatrix}\\[2mm]
+				& = & \dfrac{1}{8} \sec 2x(2 \cos ^22x+2 \sin ^22x) \\[2mm]
+				& = & \dfrac{1}{4} \sec 2x. \\[5mm]
+				\mu _2' = \dfrac{W_2}{W} & = & \dfrac{1}{8} \begin{vmatrix}
+					1 & 0 & \sin 2x \\
+					0 & 0 & 2 \cos 2x \\
+					0 & \sec 2x & -3 \sin 2x
+				\end{vmatrix} = - \dfrac{1}{4} \\[5mm]
+				\mu _3\,' & = & \dfrac{1}{8} \begin{vmatrix}
+					1 & \cos 2x & 0 \\
+					0 & .2 \sin 2x & 0 \\
+					0 & -4 \cos 2x & \sec x
+				\end{vmatrix} = \dfrac{1}{8} (-2 \sin 2x \sec 2x)\\[2mm]
+				& = & - \dfrac{1}{4} \tan 2x.
+			\end{array}
+		\]
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		Integramos con respecto a \(x\).
+		\[
+			\begin{array}{rcl}
+				\mu _1(x) & = & \dis\int \dfrac{1}{4} \sec 2xdx = \dfrac{1}{2} \ln \big| \sec 2x+ \tan 2x \big| \\[2mm]
+				\mu _2(x) & = & \dis\int - \dfrac{1}{4} dx = - \dfrac{1}{4} x \\[2mm]
+				\mu _3(x) & = & \dis\int - \dfrac{1}{4} \tan 2xdx = \dfrac{1}{4 \cdot 2} \dis\int \dfrac{\sin 2x}{\cos 2x} dx = \dfrac{1}{8} \ln \big| \cos 2x \big| \\[2mm]
+				& = & - \dfrac{1}{8} \ln \big| \cos 2x \big| ^{-1} = - \dfrac{1}{8} \ln (\sec 2x).
+			\end{array}
+		\]
+		\[
+			\therefore \hspace{5mm} y_p(x) = \dfrac{1}{2} \ln \big| \sec 2x+ \tan 2x \big| - \dfrac{1}{4} x \cos 2x- \dfrac{1}{8} \ln \big| \sec ^22x \big| \sin 2x.
+		\]
+		Por consiguiente, la solución general es:
+		\[
+			y(x) = c_1+c_2 \cos 2x+ c_3 \sin 2x+y_p(x).
+		\]
+	\end{exampleblock}
 \end{frame}
 % )))
 

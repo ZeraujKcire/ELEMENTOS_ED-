@@ -541,6 +541,7 @@
 \end{frame}
 
 \begin{frame}[t]
+	\vspace{-3mm}
 	\begin{example}
 		Determine la solución general de las siguientes E.D.L.H.
 		\begin{enumerate}
@@ -549,10 +550,94 @@
 			\item \(y''' +3y'' -4y=0\).
 			\item Suponga que las soluciones dela ec. característica de una E.D. son \(-1,0,3+2i, \pi , -1 +i\).
 		\end{enumerate}
+		\textbf{Solución.} 
+		\begin{enumerate}
+			\item La ecuación característica correspondiente a la E.D. es: \vspace{-3mm}
+		\[
+			m^4+4m^2+4 =0 \hspace{5mm} \iff (m^2+2) ^2 =0 \vspace{-3mm}
+		\]
+		haciendo \(x=m^2 \;\implies\;  x^2+4x=0\)
+		\[
+			\begin{array}{rcl}
+				\iff (x+2) ^2 & = & 0 \\
+				\iff x+2 & = & 0\\
+				x & = & -2 \mbox{ con multiplicidad } 2.
+			\end{array}
+		\]
+		\end{enumerate}
 	\end{example}
 \end{frame}
-\begin{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\(\iff m^2 = x = -2 \;\implies\; m = \pm \sqrt{-2} = \pm i \sqrt{2}\), con multiplicidad \(2\). \\
+		Luego, se tienen \(4\) soluciones, \(y_1(x) = \cancelto{1}{e^{0x}} \cos \sqrt{2} x \), \(y_2(x) = \cancelto{1}{e^{0x} }\sin \sqrt{2} x\), \(y_3(x) = x \cos \sqrt{2} x\), y \(y_4(x) = x \sin \sqrt{2} x\). \\[2mm]
+		Por lo tanto, la solución general de la E.D. está dada por
+		\begin{center}
+			\(y(x) = c_1 \cos \sqrt{2} x + c_2 \sin \sqrt{2} x +\) \color{red} \underline{\color{black} \(c_3x \cos \sqrt{2} x + c_4 x \sin \sqrt{2} x\)}
+		\end{center}
+		donde \(c_1,c_2,c_3,c_4\) son constantes arbitrarias.
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+		\item La ecuación característica correspondiente a la E.D. es: \vspace{-3mm}
+				\[
+					\begin{array}{rcl}
+						\underbrace{}_{a_3} m^3+ \underbrace{3} _{a_2} m^2- \underbrace{4} _{a_0} & = & 0 \\
+						m^3+3m^2 & = & 4 \hspace{5mm} 1\mbox{\footnotesize posible raíz positiva} \\
+						(-m) ^3+3(-m) ^2-4 & = & 0 \\
+						\iff -m^3+3m^2 & = & -4 \hspace{5mm} 2 \mbox{\footnotesize posibles raíces negativas.}
+					\end{array}
+				\]
+		\end{enumerate}
+	\end{exampleblock}
 \end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		Posibles raíces racionales \(\dfrac{div a_0}{div a_3} = \pm 1, \pm 2, \pm 4\).
+		\begin{table}[hbtp!]
+			\centering
+			\begin{tabular}{rl}
+				\(a_0 = -4\), & \(div: \pm 1, \pm 2, \pm 4\) \\
+				\(a_3 = 1\), & \(div: \pm 1\)
+			\end{tabular}
+		\end{table}
+		Usamos división sintética.\\
+		\begin{minipage}{0.5\linewidth}
+			\begin{tabular}{*{5}{r}}
+				1 & 3 & 0 & \(-4\) & \underline{\(|-1\)} \\
+				& \(-1\) & \(-2\) & 2 & \\ \hline 
+				1 & 2 & \(-2\) & \(-2\) & \(\ne 0\)
+			\end{tabular}
+		\end{minipage}
+		\begin{minipage}{0.4\linewidth}
+			\begin{tabular}{*{5}{r}}
+				\(1\) & \(3\) & \(0\) & \(-4\) & \underline{\(|-2\)} \\
+				& \(-2\) & \(-2\) & \(4\) & \\ \hline
+				\(1\) & \(1\) & \(-2\) & \(0\) & \(=0\)
+			\end{tabular}
+		\end{minipage}
+		\[
+			\begin{array}{rcl}
+				m^3+3m^2-4 = (m+2) (m^2+m-2) & = & 0 \\[2mm]
+				m_1=-2 \hspace{5mm} \mbox{o} \hspace{5mm} m^2+m-2 & = & 0 \\[2mm]
+				(m+2) (m-1) & = & 0 \\[2mm]
+				m_2 = -2 && m_3 = 1.
+			\end{array} \vspace{-3mm}
+		\]
+		\(m_1=-2\) de multiplicidad \(2\), \(m_2=1\).
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		Luego, la solución general está dada por:
+		\begin{center}
+			\color{red} \underline{\color{black} \(y(x) = c_1e^x+c_2e^{-2x} + c_3e^{-2x}\)}\color{black}, \(c_1,c_2,c_3\) constantes arbitrarias.
+		\end{center}
+	\end{exampleblock}
+\end{frame}
+
 % )))
 
 \end{document}

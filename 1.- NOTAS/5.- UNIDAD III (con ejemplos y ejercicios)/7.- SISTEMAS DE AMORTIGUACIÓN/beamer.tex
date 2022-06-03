@@ -7,17 +7,20 @@
 \section{Movimiento Vibratorio de Sistemas Mecánicos.} % (((
 \begin{frame}[t]
 	\frametitle{Movimiento Vibratorio de Sistemas Mecánicos.}
-	Suponga una masa \(m\) unida a un resorte flexible colgado sobre un soporte rígido. La distancia de alargamiento dependerá de la masa. Según la Ley de Hooke, el resorte mismo ejerce una fuerza de restitución opuesta a la dirección de alargamiento y proporcional al dicho alargamiento \(S\), es decir:
-	\[
-		F=kS \;,\; k = \mbox{constante del resorte.}
-	\]
-	\begin{figure}[ht]
-		\centering
-		\includegraphics[width= 0.8 \linewidth]{IMAGENES/1/tikz.pdf}
-	\end{figure}
+	\begin{block}{}
+		Suponga una masa \(m\) unida a un resorte flexible colgado sobre un soporte rígido. La distancia de alargamiento dependerá de la masa. Según la Ley de Hooke, el resorte mismo ejerce una fuerza de restitución opuesta a la dirección de alargamiento y proporcional al dicho alargamiento \(S\), es decir: \vspace{-3mm}
+		\[
+			F=kS \;,\; k = \mbox{constante del resorte.} \vspace{-6mm}
+		\]
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width= 0.8 \linewidth]{IMAGENES/1/tikz.pdf}
+		\end{figure}
+	\end{block}
 \end{frame}
 
 \begin{frame}[t]
+	\begin{block}{}
 	\begin{columns}
 		\column{0.3\textwidth}
 		Equilibrio
@@ -25,7 +28,7 @@
 			\begin{array}{rcl}
 				F_g-F_R & = & 0 \\
 				F_g-kS & = & 0 \\
-				\iff mg = kS.
+				\iff mg & = & kS.
 			\end{array}
 		\]
 		\column{0.3\textwidth}
@@ -39,6 +42,7 @@
 			\end{array}
 		\]
 	\end{columns}
+	\end{block}
 \end{frame}
 
 \begin{frame}[t]
@@ -93,8 +97,98 @@
 	\begin{example}
 		Una masa que pesa \(2lb\) hace que un resorte se estire \(6\;in\).
 		Cuando \(t=0\)  la masa se suelta desde un punto a \(8i\;n\) abajo de la posición de equilibrio con una velocidad hacia arriba de \(4/3\;ft/s\).
-		Deduzca la ecuación de movimiento libre.
+		Deduzca la ecuación de movimiento libre. \\[2mm]
+		\textbf{Solución.} \\[4mm]
+		\begin{minipage}{0.5\linewidth}
+			\(W=2lb\) \\
+			\(S = 6in= 0..5ft\) \\
+			\(g = 32.2ft/s^2\)
+		\end{minipage}
+		\begin{minipage}{0.4\linewidth}
+			\(x(0) = 8in = 2/3ft\) \\
+			\(x\,'(0) = -4/3ft/s\)
+		\end{minipage} \\[2mm]
+		La E.D. que describe el movimiento libre es:
+		\[
+			\dfrac{d^2x}{dt^2} + \omega ^2x = 0. \vspace{-4mm}
+		\]
+		Determinemos \(m\), \(W = mg \;\implies\; m = \dfrac{W}{g} = \dfrac{2lb}{32.2ft/s} = \dfrac{1}{61} slug\).
 	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		Por la Ley de Hooke, \(W = mg = k s \;\implies\; k = W/s = \dfrac{2lb}{1/2ft} = 4 \dfrac{lb}{ft}\). \\[2mm]
+		Por lo tanto, \(\omega ^2= \dfrac{k}{m} = \dfrac{4lb/ft}{1/6.1slug} = 64.4 rad/s\). \\[2mm]
+		Luego, la ecuación diferencial es:
+		\begin{center}
+			\color{red} \underline{\color{black} \(\dfrac{d^2x}{dt^2} + 64.4x = 0\)}
+		\end{center}
+		Luego, la ecuación
+		\[
+			\begin{array}{rcl}
+				m^2+64.4 = 0 \;\implies\; m^2=-64.4 & \;\implies\; & m_{1,2} = \pm \sqrt{-64.4} \\[2mm]
+				m_{1,2} = \pm i 8.02 & \;\implies\; & \alpha =0 \;,\; \beta =8.02.
+			\end{array}
+		\]
+		\(\therefore\) \hspace{5mm} La ecuación de movimiento general es: \vspace{-4mm}
+		\[
+			x(t) = c_1 \cos (8.02t) + c_2 \sin (8.02t).
+		\]
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		Aplicamos las C.I. \(x(0) = 2/3\), \(x\,' (0) = -4/3\).
+		\[
+			\begin{array}{rcl}
+				x(0) & = & c_1 \cancelto{1}{\cos (8.02 \cdot 0)} + c_2 \cancelto{0}{\sin (8.02 \cdot 0)} = 2/3 \\[2mm]
+				c_1 & = & 2/3. \\[2mm]
+				x\,'(t) & = & -c_1 \sin (8.02t) + c_2 \cos (8.02t)
+			\end{array}
+		\]
+		Aplciamos la C.I. \(x\,'(0) = -4/3\),
+		\[
+			\begin{array}{rcl}
+				x\,'(0) & = & -c_1 \cancelto{0}{\sin (8.02 \cdot 0)} + c_2 \cancelto{1}{\cos (8.02 \cdot 0)} = -4/3 \\[2mm]
+				c_2 & = & -4/3.
+			\end{array}
+		\]
+		Luego, la ecuación del movimiento es:
+		\begin{center}
+			\color{red} \underline{\color{black} \(x(t) = 2/3 \cos (8.02t) - 0.16 \sin (8.02t)\)}
+		\end{center}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{exampleblock}{}
+		\[
+			\begin{array}{rcl}
+				x(t) & = & A \sin (8.02t+ \varphi) \\[2mm]
+				A & = & \sqrt{(2/3) ^2+(0.16) ^2} \\[2mm]
+				\varphi & = & \arctan \bigg(\dfrac{2/3}{0.16}\bigg) = -1.33
+			\end{array}
+		\]
+		La ecuación del movimiento se puede escribir como:
+		\begin{center}
+			\color{red} \underline{\color{black} \(x(t) = 0.68 \sin (8.02t-1.33)\)}
+		\end{center}
+		\begin{minipage}{0.5\linewidth}
+			\includegraphics[width= \linewidth]{IMAGENES/3/tikz.pdf}
+		\end{minipage}
+		\begin{minipage}{0.4\linewidth}
+			\[
+				\begin{array}{rcl}
+					f & = & \dfrac{\omega}{2 \pi} = \dfrac{8.02}{2 \pi} \\[2mm]
+					& = & 1.27Hz \\[4mm]
+					T & = & \dfrac{2 \pi}{\omega} = \dfrac{2 \pi}{8.02} \\[2mm]
+					& = & 0.78s.
+				\end{array}
+			\]
+		\end{minipage}
+	\end{exampleblock}
 \end{frame}
 % )))
 
